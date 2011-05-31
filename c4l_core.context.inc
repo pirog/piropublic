@@ -23,7 +23,7 @@ function c4l_core_context_default_contexts() {
       'blocks' => array(
         'block-6' => array(
           'module' => 'block',
-          'delta' => 6,
+          'delta' => 7,
           'region' => 'footer_bottom',
           'weight' => 0,
         ),
