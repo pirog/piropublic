@@ -21,24 +21,19 @@ function c4l_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-6' => array(
+          'module' => 'block',
+          'delta' => 6,
+          'region' => 'footer_bottom',
+          'weight' => 0,
+        ),
         'menu-menu-footer' => array(
           'module' => 'menu',
           'delta' => 'menu-footer',
           'region' => 'footer_bottom',
-          'weight' => 0,
-        ),
-        'block-5' => array(
-          'module' => 'block',
-          'delta' => 6,
-          'region' => 'footer_bottom',
           'weight' => 1,
         ),
       ),
-    ),
-    'theme' => array(
-      'title' => '',
-      'subtitle' => '',
-      'class' => 'footer_bottom_core',
     ),
   );
   $context->condition_mode = 0;
