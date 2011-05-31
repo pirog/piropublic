@@ -8,8 +8,6 @@ dependencies[] = "uuid_features"
 
 description = "Provides core functionality and configuration for the C4L website"
 
-stylesheets[all][] = css/footer_bottom.css
-
 features[context][] = "footer_bottom"
 features[ctools][] = "context:context:3"
 features[ctools][] = "strongarm:strongarm:1"
@@ -44,4 +42,4 @@ name = "Campaign for Liberty - CORE"
 package = "Features"
 project = "c4l_core"
 project status url = "http://www.piroshare.com/fserver"
-version = "6.x-2.0-alpha1"
+version = "6.x-2.0-dev"

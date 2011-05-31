@@ -2,6 +2,16 @@
 
 include_once('c4l_core.features.inc');
 
+
+/**
+ * Implement hook_init()
+ */
+function c4l_core_init() {
+  if (variable_get('theme_default')=='liberty'){
+    drupal_add_css(drupal_get_path('module', 'c4l_core') .'/css/footer_bottom.css');
+  }
+}
+
 /**
 * Implements hook_uuid_node_features_export_render_alter()
 */
