@@ -27,9 +27,9 @@ function c4l_core_context_default_contexts() {
           'region' => 'footer_bottom',
           'weight' => 0,
         ),
-        'block-22' => array(
+        'block-5' => array(
           'module' => 'block',
-          'delta' => 22,
+          'delta' => 5,
           'region' => 'footer_bottom',
           'weight' => 1,
         ),
