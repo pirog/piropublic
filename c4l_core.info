@@ -5,7 +5,11 @@ dependencies[] = "fe_block"
 dependencies[] = "menu"
 dependencies[] = "strongarm"
 dependencies[] = "uuid_features"
+
 description = "Provides core functionality and configuration for the C4L website"
+
+stylesheets[all][] = css/footer_bottom.css
+
 features[context][] = "footer_bottom"
 features[ctools][] = "context:context:3"
 features[ctools][] = "strongarm:strongarm:1"
@@ -35,6 +39,7 @@ features[variable][] = "contact_form_information"
 features[variable][] = "contact_hourly_threshold"
 features[variable][] = "node_options_page"
 features[variable][] = "upload_page"
+
 name = "Campaign for Liberty - CORE"
 package = "Features"
 project = "c4l_core"

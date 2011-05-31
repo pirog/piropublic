@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";
+
+#block-menu-menu-footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+#block-menu-menu-footer {
+  background:blue;
+}
+
+#block-menu-menu-footer li {
+  display: inline;
+  font-size: 11px;
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+#block-menu-menu-footer li a {
+  color: #c5b78e;
+  border-right: 1px solid #6f605d;
+  line-height: 11px;
+  padding: 0 10px 0 5px;
+}

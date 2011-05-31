@@ -24,4 +24,3 @@ function c4l_core_uuid_node_features_export_render_alter(&$export, $node, $modul
     }
   }
 }
-?>
