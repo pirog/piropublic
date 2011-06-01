@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_default_fe_block_settings().
  */
-function c4l_core_default_fe_block_settings() {
+function piropublic_default_fe_block_settings() {
   $export = array();
 
   // admin_theme

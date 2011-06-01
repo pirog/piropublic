@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_strongarm().
  */
-function c4l_core_strongarm() {
+function piropublic_strongarm() {
   $export = array();
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_uuid_features_default_content().
  */
-function c4l_core_uuid_features_default_content() {
+function piropublic_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(

@@ -1,21 +1,21 @@
 <?php
 
-include_once('c4l_core.features.inc');
+include_once('piropublic.features.inc');
 
 
 /**
  * Implement hook_init()
  */
-function c4l_core_init() {
+function piropublic_init() {
   if (variable_get('theme_default')=='liberty'){
-    drupal_add_css(drupal_get_path('module', 'c4l_core') .'/css/footer_bottom.css');
+    drupal_add_css(drupal_get_path('module', 'piropublic') .'/css/footer_bottom.css');
   }
 }
 
 /**
 * Implements hook_uuid_node_features_export_render_alter()
 */
-function c4l_core_uuid_node_features_export_render_alter(&$export, $node, $module) {
+function piropublic_uuid_node_features_export_render_alter(&$export, $node, $module) {
   // don't allow uuid_features to export node properties that can change on deployment
   unset($export->changed);
   unset($export->created);

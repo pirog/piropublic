@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_default_fe_block_boxes().
  */
-function c4l_core_default_fe_block_boxes() {
+function piropublic_default_fe_block_boxes() {
   $export = array();
 
   $fe_block_boxes = new stdClass;

@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_ctools_plugin_api().
  */
-function c4l_core_ctools_plugin_api() {
+function piropublic_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "context" && $api == "context") {
     return array("version" => 3);
@@ -16,7 +16,7 @@ function c4l_core_ctools_plugin_api() {
 /**
  * Implementation of hook_node_info().
  */
-function c4l_core_node_info() {
+function piropublic_node_info() {
   $items = array(
     'page' => array(
       'name' => t('Page'),

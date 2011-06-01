@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_menu_default_menu_custom().
  */
-function c4l_core_menu_default_menu_custom() {
+function piropublic_menu_default_menu_custom() {
   $menus = array();
 
   // Exported menu: menu-footer
