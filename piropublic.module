@@ -4,11 +4,22 @@ include_once('piropublic.features.inc');
 
 
 /**
- * Implement hook_init()
+ * Implementation of hook_init()
  */
 function piropublic_init() {
   if (variable_get('theme_default', 'garland')=='liberty'){
     drupal_add_css(drupal_get_path('module', 'piropublic') .'/css/footer_bottom.css');
+  }
+}
+
+/**
+ * Implementation of hook_FORM_ID_alter()
+ */
+function piropublic_form_system_site_information_settings_alter(&$form, &$form_state) {
+  if (variable_get('theme_default', 'garland')=='liberty'){
+    unset($form['site_mission']);
+    unset($form['site_footer']);
+    unset($form['site_slogan']);
   }
 }
 
