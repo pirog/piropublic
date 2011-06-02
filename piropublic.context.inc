@@ -41,7 +41,7 @@ function piropublic_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Context for the footer bottom');
-  t('core');
+  t('piropublic core');
 
   $export['footer_bottom'] = $context;
   $context = new stdClass;
@@ -74,7 +74,7 @@ function piropublic_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Context for header top menu for anonymous users');
-  t('core');
+  t('piropublic core');
 
   $export['header_top_menu_anon'] = $context;
   $context = new stdClass;
@@ -107,7 +107,7 @@ function piropublic_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Context for header top menu for authenticated users');
-  t('core');
+  t('piropublic core');
 
   $export['header_top_menu_auth'] = $context;
   return $export;
