@@ -749,17 +749,6 @@ flag*';
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'vertical_tabs_forms';
-  $strongarm->value = array(
-    'civicrmactivity_node_form' => FALSE,
-    'lawmaker_node_form' => FALSE,
-    'story_node_form' => FALSE,
-  );
-
-  $export['vertical_tabs_forms'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_batch_limit';
   $strongarm->value = '100';
 
