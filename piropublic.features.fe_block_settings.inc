@@ -24,6 +24,21 @@ function piropublic_default_fe_block_settings() {
     'machine_name' => 'footer_copyright',
   );
 
+  $theme['block-contact_information'] = array(
+    'module' => 'block',
+    'theme' => 'admin_theme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'Contact Information',
+    'cache' => '-1',
+    'machine_name' => 'contact_information',
+  );
+
   $theme['menu-menu-authheader'] = array(
     'module' => 'menu',
     'delta' => 'menu-authheader',
@@ -87,6 +102,21 @@ function piropublic_default_fe_block_settings() {
     'title' => '<none>',
     'cache' => '-1',
     'machine_name' => 'footer_copyright',
+  );
+
+  $theme['block-contact_information'] = array(
+    'module' => 'block',
+    'theme' => 'liberty',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'Contact Information',
+    'cache' => '-1',
+    'machine_name' => 'contact_information',
   );
 
   $theme['menu-menu-authheader'] = array(

@@ -8,6 +8,40 @@ function piropublic_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'contact_us';
+  $context->description = 'Context to display contact information';
+  $context->tag = 'piropublic core';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'about*' => 'about*',
+        'contact' => 'contact',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-8' => array(
+          'module' => 'block',
+          'delta' => 8,
+          'region' => 'right',
+          'weight' => 0,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context to display contact information');
+  t('piropublic core');
+
+  $export['contact_us'] = $context;
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'footer_bottom';
   $context->description = 'Context for the footer bottom';
   $context->tag = 'piropublic core';
@@ -21,7 +55,7 @@ function piropublic_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-6' => array(
+        'block-7' => array(
           'module' => 'block',
           'delta' => 7,
           'region' => 'footer_bottom',
