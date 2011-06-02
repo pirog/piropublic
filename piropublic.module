@@ -7,7 +7,7 @@ include_once('piropublic.features.inc');
  * Implement hook_init()
  */
 function piropublic_init() {
-  if (variable_get('theme_default')=='liberty'){
+  if (variable_get('theme_default', 'garland')=='liberty'){
     drupal_add_css(drupal_get_path('module', 'piropublic') .'/css/footer_bottom.css');
   }
 }
