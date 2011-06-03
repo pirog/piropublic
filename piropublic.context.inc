@@ -22,9 +22,9 @@ function piropublic_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-8' => array(
+        'block-1' => array(
           'module' => 'block',
-          'delta' => 8,
+          'delta' => 1,
           'region' => 'right',
           'weight' => 0,
         ),
@@ -55,15 +55,15 @@ function piropublic_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-7' => array(
-          'module' => 'block',
-          'delta' => 7,
-          'region' => 'footer_bottom',
-          'weight' => 0,
-        ),
         'menu-menu-footer' => array(
           'module' => 'menu',
           'delta' => 'menu-footer',
+          'region' => 'footer_bottom',
+          'weight' => 0,
+        ),
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => 2,
           'region' => 'footer_bottom',
           'weight' => 1,
         ),
