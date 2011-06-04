@@ -6,14 +6,6 @@
 function piropublic_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: Use PHP input for field settings (dangerous - grant with care)
-  $permissions['Use PHP input for field settings (dangerous - grant with care)'] = array(
-    'name' => 'Use PHP input for field settings (dangerous - grant with care)',
-    'roles' => array(
-      '0' => 'administrator',
-    ),
-  );
-
   // Exported permission: access administration pages
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
@@ -21,16 +13,6 @@ function piropublic_user_default_permissions() {
       '0' => 'administrator',
       '1' => 'headquarters',
       '2' => 'site administrator',
-    ),
-  );
-
-  // Exported permission: access comments
-  $permissions['access comments'] = array(
-    'name' => 'access comments',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'anonymous user',
-      '2' => 'authenticated user',
     ),
   );
 
@@ -64,42 +46,6 @@ function piropublic_user_default_permissions() {
     ),
   );
 
-  // Exported permission: access statistics
-  $permissions['access statistics'] = array(
-    'name' => 'access statistics',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-      '2' => 'staff',
-    ),
-  );
-
-  // Exported permission: administer comment notify
-  $permissions['administer comment notify'] = array(
-    'name' => 'administer comment notify',
-    'roles' => array(
-      '0' => 'administrator',
-    ),
-  );
-
-  // Exported permission: administer comments
-  $permissions['administer comments'] = array(
-    'name' => 'administer comments',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-      '2' => 'staff',
-    ),
-  );
-
-  // Exported permission: administer conditional fields
-  $permissions['administer conditional fields'] = array(
-    'name' => 'administer conditional fields',
-    'roles' => array(
-      '0' => 'administrator',
-    ),
-  );
-
   // Exported permission: administer content types
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
@@ -122,14 +68,6 @@ function piropublic_user_default_permissions() {
     'roles' => array(
       '0' => 'administrator',
       '1' => 'headquarters',
-    ),
-  );
-
-  // Exported permission: administer forums
-  $permissions['administer forums'] = array(
-    'name' => 'administer forums',
-    'roles' => array(
-      '0' => 'administrator',
     ),
   );
 
@@ -207,16 +145,6 @@ function piropublic_user_default_permissions() {
     ),
   );
 
-  // Exported permission: administer taxonomy
-  $permissions['administer taxonomy'] = array(
-    'name' => 'administer taxonomy',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-      '2' => 'staff',
-    ),
-  );
-
   // Exported permission: administer users
   $permissions['administer users'] = array(
     'name' => 'administer users',
@@ -246,15 +174,6 @@ function piropublic_user_default_permissions() {
     ),
   );
 
-  // Exported permission: create forum topics
-  $permissions['create forum topics'] = array(
-    'name' => 'create forum topics',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-    ),
-  );
-
   // Exported permission: create page content
   $permissions['create page content'] = array(
     'name' => 'create page content',
@@ -274,29 +193,12 @@ function piropublic_user_default_permissions() {
     ),
   );
 
-  // Exported permission: delete any forum topic
-  $permissions['delete any forum topic'] = array(
-    'name' => 'delete any forum topic',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-    ),
-  );
-
   // Exported permission: delete any page content
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
       '0' => 'administrator',
       '1' => 'headquarters',
-    ),
-  );
-
-  // Exported permission: delete own forum topics
-  $permissions['delete own forum topics'] = array(
-    'name' => 'delete own forum topics',
-    'roles' => array(
-      '0' => 'administrator',
     ),
   );
 
@@ -309,15 +211,6 @@ function piropublic_user_default_permissions() {
     ),
   );
 
-  // Exported permission: edit any forum topic
-  $permissions['edit any forum topic'] = array(
-    'name' => 'edit any forum topic',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-    ),
-  );
-
   // Exported permission: edit any page content
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
@@ -325,14 +218,6 @@ function piropublic_user_default_permissions() {
       '0' => 'administrator',
       '1' => 'headquarters',
       '2' => 'staff',
-    ),
-  );
-
-  // Exported permission: edit own forum topics
-  $permissions['edit own forum topics'] = array(
-    'name' => 'edit own forum topics',
-    'roles' => array(
-      '0' => 'administrator',
     ),
   );
 
@@ -371,24 +256,6 @@ function piropublic_user_default_permissions() {
     ),
   );
 
-  // Exported permission: post comments
-  $permissions['post comments'] = array(
-    'name' => 'post comments',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'authenticated user',
-    ),
-  );
-
-  // Exported permission: post comments without approval
-  $permissions['post comments without approval'] = array(
-    'name' => 'post comments without approval',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'authenticated user',
-    ),
-  );
-
   // Exported permission: revert revisions
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
@@ -405,14 +272,6 @@ function piropublic_user_default_permissions() {
       '0' => 'administrator',
       '1' => 'anonymous user',
       '2' => 'authenticated user',
-    ),
-  );
-
-  // Exported permission: subscribe to comments
-  $permissions['subscribe to comments'] = array(
-    'name' => 'subscribe to comments',
-    'roles' => array(
-      '0' => 'administrator',
     ),
   );
 
@@ -440,14 +299,6 @@ function piropublic_user_default_permissions() {
       '0' => 'administrator',
       '1' => 'headquarters',
       '2' => 'staff',
-    ),
-  );
-
-  // Exported permission: view post access counter
-  $permissions['view post access counter'] = array(
-    'name' => 'view post access counter',
-    'roles' => array(
-      '0' => 'administrator',
     ),
   );
 

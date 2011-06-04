@@ -149,7 +149,7 @@ function piropublic_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_medium';
-  $strongarm->value = 'F j, Y';
+  $strongarm->value = 'D, Y-m-d H:i';
 
   $export['date_format_medium'] = $strongarm;
   $strongarm = new stdClass;
@@ -187,20 +187,6 @@ function piropublic_strongarm() {
   $strongarm->value = 100;
 
   $export['date_min_year'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'date_php_min_year';
-  $strongarm->value = 1971;
-
-  $export['date_php_min_year'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'date_popup_css_file';
-  $strongarm->value = 'sites/all/modules/date/date_popup/themes/datepicker.css';
-
-  $export['date_popup_css_file'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -676,8 +662,9 @@ flag*';
   $strongarm->api_version = 1;
   $strongarm->name = 'mollom_status';
   $strongarm->value = array(
-    'keys valid' => TRUE,
     'keys' => TRUE,
+    'keys valid' => TRUE,
+    'servers' => FALSE,
   );
 
   $export['mollom_status'] = $strongarm;
@@ -823,7 +810,7 @@ flag*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_generated_last';
-  $strongarm->value = 1299364201;
+  $strongarm->value = 1307222959;
 
   $export['xmlsitemap_generated_last'] = $strongarm;
   $strongarm = new stdClass;
