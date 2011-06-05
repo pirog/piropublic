@@ -84,6 +84,21 @@ function piropublic_default_fe_block_settings() {
     'cache' => '-1',
   );
 
+  $theme['views-legislative_efforts-block_1'] = array(
+    'module' => 'views',
+    'delta' => 'legislative_efforts-block_1',
+    'theme' => 'admin_theme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '4',
+  );
+
   $export['admin_theme'] = $theme;
 
   // liberty
@@ -93,7 +108,7 @@ function piropublic_default_fe_block_settings() {
     'module' => 'block',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '0',
+    'weight' => '-1',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
@@ -124,7 +139,7 @@ function piropublic_default_fe_block_settings() {
     'delta' => 'menu-authheader',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '0',
+    'weight' => '-2',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
@@ -139,7 +154,7 @@ function piropublic_default_fe_block_settings() {
     'delta' => 'menu-footer',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '0',
+    'weight' => '1',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
@@ -154,7 +169,7 @@ function piropublic_default_fe_block_settings() {
     'delta' => 'menu-header',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '0',
+    'weight' => '-3',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
@@ -162,6 +177,21 @@ function piropublic_default_fe_block_settings() {
     'pages' => '',
     'title' => '<none>',
     'cache' => '-1',
+  );
+
+  $theme['views-legislative_efforts-block_1'] = array(
+    'module' => 'views',
+    'delta' => 'legislative_efforts-block_1',
+    'theme' => 'liberty',
+    'status' => 0,
+    'weight' => '2',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '4',
   );
 
   $export['liberty'] = $theme;

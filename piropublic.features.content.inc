@@ -51,17 +51,17 @@ function piropublic_content_default_fields() {
     'min' => '',
     'max' => '',
     'allowed_values' => '0|No
-1|Promoted as Upcoming Event',
+1|Upcoming Event',
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => array(
         '0' => array(
-          'value' => 1,
+          'value' => 0,
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Promotes as Events',
-      'weight' => '6',
+      'label' => 'Upcoming Event',
+      'weight' => '-1',
       'description' => '',
       'type' => 'optionwidgets_onoff',
       'module' => 'optionwidgets',
@@ -115,10 +115,10 @@ function piropublic_content_default_fields() {
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => '',
       'progress_indicator' => 'bar',
-      'max_filesize_per_file' => '',
-      'max_filesize_per_node' => '',
-      'max_resolution' => 0,
-      'min_resolution' => 0,
+      'max_filesize_per_file' => '1M',
+      'max_filesize_per_node' => '1M',
+      'max_resolution' => '500x500',
+      'min_resolution' => '165x200',
       'alt' => '',
       'custom_alt' => 0,
       'title' => '',
@@ -126,17 +126,21 @@ function piropublic_content_default_fields() {
       'title_type' => 'textfield',
       'default_image' => NULL,
       'use_default_image' => 0,
+      'resolution' => '165x200',
+      'enforce_ratio' => 1,
+      'croparea' => '500x500',
+      'enforce_minimum' => 1,
       'label' => 'Featured image',
-      'weight' => '4',
+      'weight' => '-4',
       'description' => '',
-      'type' => 'imagefield_widget',
-      'module' => 'imagefield',
+      'type' => 'imagefield_crop_widget',
+      'module' => 'imagefield_crop',
     ),
   );
 
-  // Exported field: field_feat_link
-  $fields['featured_blocks-field_feat_link'] = array(
-    'field_name' => 'field_feat_link',
+  // Exported field: field_featured_block_link
+  $fields['featured_blocks-field_featured_block_link'] = array(
+    'field_name' => 'field_featured_block_link',
     'type_name' => 'featured_blocks',
     'display_settings' => array(
       'label' => array(
@@ -169,31 +173,41 @@ function piropublic_content_default_fields() {
       ),
     ),
     'widget_active' => '1',
-    'type' => 'text',
+    'type' => 'link',
     'required' => '1',
     'multiple' => '0',
-    'module' => 'text',
+    'module' => 'link',
     'active' => '1',
-    'text_processing' => '0',
-    'max_length' => '',
-    'allowed_values' => '',
-    'allowed_values_php' => '',
+    'attributes' => array(
+      'target' => 'user',
+      'rel' => '',
+      'class' => '',
+      'title' => '',
+    ),
+    'display' => array(
+      'url_cutoff' => '80',
+    ),
+    'url' => 0,
+    'title' => 'none',
+    'title_value' => '',
+    'enable_tokens' => 0,
+    'validate_url' => 1,
     'widget' => array(
-      'rows' => 5,
-      'size' => '60',
       'default_value' => array(
         '0' => array(
-          'value' => '',
-          '_error_element' => 'default_value_widget][field_feat_link][0][value',
+          'title' => '',
+          'url' => '',
+          'attributes' => array(
+            'target' => '_blank',
+          ),
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Featured Link',
-      'weight' => '5',
-      'description' => 'Add the path to the page you\'re linking too, without the site\'s address. Eg: /node/99 .
-To link to an external site include http:// Eg: http://www.nameofthesite.com/node/99 .',
-      'type' => 'text_textfield',
-      'module' => 'text',
+      'label' => 'Link to',
+      'weight' => '-3',
+      'description' => '',
+      'type' => 'link',
+      'module' => 'link',
     ),
   );
 
@@ -242,74 +256,19 @@ To link to an external site include http:// Eg: http://www.nameofthesite.com/nod
     'min' => '',
     'max' => '',
     'allowed_values' => '0|No
-1|Promote as Legislative Efforts',
+1|Legislative Effort',
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => array(
         '0' => array(
-          'value' => 1,
+          'value' => 0,
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Promote as Legislative Efforts',
-      'weight' => '7',
+      'label' => 'Legislative Effort',
+      'weight' => '-2',
       'description' => '',
       'type' => 'optionwidgets_onoff',
-      'module' => 'optionwidgets',
-    ),
-  );
-
-  // Exported field: field_link
-  $fields['featured_blocks-field_link'] = array(
-    'field_name' => 'field_link',
-    'type_name' => 'featured_blocks',
-    'display_settings' => array(
-      'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'text',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'text',
-    'active' => '1',
-    'text_processing' => '0',
-    'max_length' => '',
-    'allowed_values' => '',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'default_value' => NULL,
-      'default_value_php' => NULL,
-      'label' => 'Featured Link',
-      'weight' => '-3',
-      'description' => '',
-      'type' => 'optionwidgets_select',
       'module' => 'optionwidgets',
     ),
   );
@@ -359,17 +318,17 @@ To link to an external site include http:// Eg: http://www.nameofthesite.com/nod
     'min' => '',
     'max' => '',
     'allowed_values' => '0|No
-1|Promoted as From Our Store',
+1|From Our Store',
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => array(
         '0' => array(
-          'value' => NULL,
+          'value' => 0,
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Promote as From Our Store',
-      'weight' => '8',
+      'label' => 'From Our Store',
+      'weight' => 0,
       'description' => '',
       'type' => 'optionwidgets_onoff',
       'module' => 'optionwidgets',
@@ -378,11 +337,11 @@ To link to an external site include http:// Eg: http://www.nameofthesite.com/nod
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Featured Link');
   t('Featured image');
-  t('Promote as From Our Store');
-  t('Promote as Legislative Efforts');
-  t('Promotes as Events');
+  t('From Our Store');
+  t('Legislative Effort');
+  t('Link to');
+  t('Upcoming Event');
 
   return $fields;
 }

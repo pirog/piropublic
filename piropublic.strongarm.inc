@@ -158,14 +158,14 @@ function piropublic_strongarm() {
   $strongarm->name = 'content_extra_weights_featured_blocks';
   $strongarm->value = array(
     'title' => '-5',
-    'revision_information' => '-1',
-    'author' => '-2',
-    'options' => '0',
-    'comment_settings' => '3',
-    'menu' => '-4',
-    'path' => '2',
-    'path_redirect' => '30',
-    'xmlsitemap' => '1',
+    'revision_information' => '2',
+    'author' => '1',
+    'options' => '3',
+    'comment_settings' => '6',
+    'menu' => '0',
+    'path' => '5',
+    'path_redirect' => '7',
+    'xmlsitemap' => '4',
   );
 
   $export['content_extra_weights_featured_blocks'] = $strongarm;
@@ -630,6 +630,13 @@ function piropublic_strongarm() {
   );
 
   $export['node_options_page'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_featured_blocks_pattern';
+  $strongarm->value = 'featuredblock/[title-raw]';
+
+  $export['pathauto_node_featured_blocks_pattern'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;

@@ -43,24 +43,6 @@ function piropublic_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-46',
   );
-  // Exported menu link: menu-footer:7b1fafd1-87f8-11e0-b28c-9f89cf71cba4
-  $menu_links['menu-footer:7b1fafd1-87f8-11e0-b28c-9f89cf71cba4'] = array(
-    'menu_name' => 'menu-footer',
-    'router_path' => 'node/%',
-    'link_title' => 'Help',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-48',
-    'uuid' => '7b1fafd1-87f8-11e0-b28c-9f89cf71cba4',
-  );
   // Exported menu link: menu-footer:9b0988d8-87f4-11e0-b28c-9f89cf71cba4
   $menu_links['menu-footer:9b0988d8-87f4-11e0-b28c-9f89cf71cba4'] = array(
     'menu_name' => 'menu-footer',
@@ -173,7 +155,6 @@ function piropublic_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Contact');
-  t('Help');
   t('Home');
   t('Login');
   t('Logout');

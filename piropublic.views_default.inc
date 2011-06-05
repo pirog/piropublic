@@ -18,7 +18,7 @@ function piropublic_views_default_views() {
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
-    'field_feat_link_value' => array(
+    'field_featured_block_link_url' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -32,7 +32,7 @@ function piropublic_views_default_views() {
         'target' => '',
         'help' => '',
         'trim' => 0,
-        'max_length' => '',
+        'max_length' => '0',
         'word_boundary' => 1,
         'ellipsis' => 1,
         'html' => 0,
@@ -50,10 +50,10 @@ function piropublic_views_default_views() {
         'multiple_from' => '',
         'multiple_reversed' => FALSE,
       ),
-      'exclude' => 1,
-      'id' => 'field_feat_link_value',
-      'table' => 'node_data_field_feat_link',
-      'field' => 'field_feat_link_value',
+      'exclude' => 0,
+      'id' => 'field_featured_block_link_url',
+      'table' => 'node_data_field_featured_block_link',
+      'field' => 'field_featured_block_link_url',
       'relationship' => 'none',
       'override' => array(
         'button' => 'Override',
@@ -64,8 +64,8 @@ function piropublic_views_default_views() {
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
-        'make_link' => 1,
-        'path' => '[field_feat_link_value]',
+        'make_link' => 0,
+        'path' => '[field_featured_block_link_url]',
         'link_class' => '',
         'alt' => '',
         'prefix' => '',
@@ -99,6 +99,136 @@ function piropublic_views_default_views() {
       'override' => array(
         'button' => 'Override',
       ),
+    ),
+    'delete_node_1' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => 'add another',
+        'make_link' => 1,
+        'path' => 'node/add/featured-blocks',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => '',
+      'exclude' => 1,
+      'id' => 'delete_node_1',
+      'table' => 'node',
+      'field' => 'delete_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'delete_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => '',
+      'exclude' => 1,
+      'id' => 'delete_node',
+      'table' => 'node',
+      'field' => 'delete_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'edit_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => '',
+      'exclude' => 1,
+      'id' => 'edit_node',
+      'table' => 'node',
+      'field' => 'edit_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'nothing' => array(
+      'label' => '',
+      'alter' => array(
+        'text' => '[delete_node_1] | [edit_node] | [delete_node] ',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'exclude' => 0,
+      'id' => 'nothing',
+      'table' => 'views',
+      'field' => 'nothing',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
     ),
   ));
   $handler->override_option('sorts', array(
@@ -142,6 +272,24 @@ function piropublic_views_default_views() {
       'field' => 'status',
       'relationship' => 'none',
     ),
+    'field_legislative_value' => array(
+      'operator' => '=',
+      'value' => array(
+        'value' => '1',
+        'min' => '',
+        'max' => '',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'field_legislative_value',
+      'table' => 'node_data_field_legislative',
+      'field' => 'field_legislative_value',
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -149,6 +297,7 @@ function piropublic_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('title', 'Legislative Efforts');
   $handler->override_option('items_per_page', 0);
   $handler->override_option('style_plugin', 'viewscarousel');
   $handler->override_option('style_options', array(
@@ -163,6 +312,9 @@ function piropublic_views_default_views() {
     'auto_pause' => 1,
     'wrap' => 'both',
   ));
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->override_option('block_description', 'Legislative Efforts');
+  $handler->override_option('block_caching', '4');
 
   $views[$view->name] = $view;
 
