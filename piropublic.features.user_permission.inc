@@ -12,7 +12,6 @@ function piropublic_user_default_permissions() {
     'roles' => array(
       '0' => 'administrator',
       '1' => 'headquarters',
-      '2' => 'site administrator',
     ),
   );
 
@@ -71,15 +70,6 @@ function piropublic_user_default_permissions() {
     ),
   );
 
-  // Exported permission: administer google analytics
-  $permissions['administer google analytics'] = array(
-    'name' => 'administer google analytics',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-    ),
-  );
-
   // Exported permission: administer menu
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
@@ -132,7 +122,6 @@ function piropublic_user_default_permissions() {
     'roles' => array(
       '0' => 'administrator',
       '1' => 'headquarters',
-      '2' => 'site administrator',
     ),
   );
 
@@ -148,16 +137,6 @@ function piropublic_user_default_permissions() {
   // Exported permission: administer users
   $permissions['administer users'] = array(
     'name' => 'administer users',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-      '2' => 'site administrator',
-    ),
-  );
-
-  // Exported permission: administer xmlsitemap
-  $permissions['administer xmlsitemap'] = array(
-    'name' => 'administer xmlsitemap',
     'roles' => array(
       '0' => 'administrator',
       '1' => 'headquarters',
@@ -247,15 +226,6 @@ function piropublic_user_default_permissions() {
     ),
   );
 
-  // Exported permission: opt-in or out of tracking
-  $permissions['opt-in or out of tracking'] = array(
-    'name' => 'opt-in or out of tracking',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'headquarters',
-    ),
-  );
-
   // Exported permission: revert revisions
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
@@ -272,14 +242,6 @@ function piropublic_user_default_permissions() {
       '0' => 'administrator',
       '1' => 'anonymous user',
       '2' => 'authenticated user',
-    ),
-  );
-
-  // Exported permission: use PHP for tracking visibility
-  $permissions['use PHP for tracking visibility'] = array(
-    'name' => 'use PHP for tracking visibility',
-    'roles' => array(
-      '0' => 'administrator',
     ),
   );
 

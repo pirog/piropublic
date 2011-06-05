@@ -18,6 +18,17 @@ function piropublic_ctools_plugin_api() {
  */
 function piropublic_node_info() {
   $items = array(
+    'featured_blocks' => array(
+      'name' => t('Featured Blocks'),
+      'module' => 'features',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '0',
+      'body_label' => '',
+      'min_word_count' => '0',
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Page'),
       'module' => 'features',
@@ -31,4 +42,13 @@ function piropublic_node_info() {
     ),
   );
   return $items;
+}
+
+/**
+ * Implementation of hook_views_api().
+ */
+function piropublic_views_api() {
+  return array(
+    'api' => '2',
+  );
 }

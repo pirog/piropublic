@@ -8,10 +8,24 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_featured_blocks';
+  $strongarm->value = 0;
+
+  $export['comment_anonymous_featured_blocks'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_page';
   $strongarm->value = '0';
 
   $export['comment_anonymous_page'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_controls_featured_blocks';
+  $strongarm->value = '3';
+
+  $export['comment_controls_featured_blocks'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -22,10 +36,24 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_featured_blocks';
+  $strongarm->value = '4';
+
+  $export['comment_default_mode_featured_blocks'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_page';
   $strongarm->value = '4';
 
   $export['comment_default_mode_page'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_order_featured_blocks';
+  $strongarm->value = '1';
+
+  $export['comment_default_order_featured_blocks'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -36,10 +64,31 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_featured_blocks';
+  $strongarm->value = '50';
+
+  $export['comment_default_per_page_featured_blocks'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_page';
   $strongarm->value = '50';
 
   $export['comment_default_per_page_page'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_featured_blocks';
+  $strongarm->value = '0';
+
+  $export['comment_featured_blocks'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_featured_blocks';
+  $strongarm->value = '1';
+
+  $export['comment_form_location_featured_blocks'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -57,10 +106,24 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_featured_blocks';
+  $strongarm->value = '0';
+
+  $export['comment_preview_featured_blocks'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_page';
   $strongarm->value = '1';
 
   $export['comment_preview_page'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_featured_blocks';
+  $strongarm->value = '0';
+
+  $export['comment_subject_field_featured_blocks'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -89,6 +152,23 @@ function piropublic_strongarm() {
   $strongarm->value = '3';
 
   $export['contact_hourly_threshold'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'content_extra_weights_featured_blocks';
+  $strongarm->value = array(
+    'title' => '-5',
+    'revision_information' => '-1',
+    'author' => '-2',
+    'options' => '0',
+    'comment_settings' => '3',
+    'menu' => '-4',
+    'path' => '2',
+    'path_redirect' => '30',
+    'xmlsitemap' => '1',
+  );
+
+  $export['content_extra_weights_featured_blocks'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -208,142 +288,6 @@ function piropublic_strongarm() {
   $strongarm->value = 1;
 
   $export['filter_html_1'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_codesnippet_after';
-  $strongarm->value = '';
-
-  $export['googleanalytics_codesnippet_after'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_codesnippet_after_backup_6300';
-  $strongarm->value = '';
-
-  $export['googleanalytics_codesnippet_after_backup_6300'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_codesnippet_before';
-  $strongarm->value = '';
-
-  $export['googleanalytics_codesnippet_before'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_codesnippet_before_backup_6300';
-  $strongarm->value = '';
-
-  $export['googleanalytics_codesnippet_before_backup_6300'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_custom';
-  $strongarm->value = '0';
-
-  $export['googleanalytics_custom'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_js_scope';
-  $strongarm->value = 'footer';
-
-  $export['googleanalytics_js_scope'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_pages';
-  $strongarm->value = 'admin
-admin/*
-user/*/*
-node/add*
-node/*/*
-messages*
-flag*';
-
-  $export['googleanalytics_pages'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_roles';
-  $strongarm->value = array(
-    1 => 0,
-    2 => 0,
-    3 => 0,
-    4 => 0,
-    16 => 0,
-    8 => 0,
-    14 => 0,
-    6 => 0,
-    17 => 0,
-    13 => 0,
-    7 => 0,
-    9 => 0,
-    5 => 0,
-    12 => 0,
-    15 => 0,
-    10 => 0,
-    11 => 0,
-  );
-
-  $export['googleanalytics_roles'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_segmentation';
-  $strongarm->value = array();
-
-  $export['googleanalytics_segmentation'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_site_search';
-  $strongarm->value = 0;
-
-  $export['googleanalytics_site_search'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_trackadsense';
-  $strongarm->value = 0;
-
-  $export['googleanalytics_trackadsense'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_trackfiles';
-  $strongarm->value = 1;
-
-  $export['googleanalytics_trackfiles'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_trackfiles_extensions';
-  $strongarm->value = '7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip';
-
-  $export['googleanalytics_trackfiles_extensions'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_trackmailto';
-  $strongarm->value = 1;
-
-  $export['googleanalytics_trackmailto'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_trackoutgoing';
-  $strongarm->value = 1;
-
-  $export['googleanalytics_trackoutgoing'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'googleanalytics_visibility';
-  $strongarm->value = '0';
-
-  $export['googleanalytics_visibility'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -671,6 +615,15 @@ flag*';
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_featured_blocks';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+
+  $export['node_options_featured_blocks'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
     0 => 'status',
@@ -729,131 +682,16 @@ flag*';
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'upload_featured_blocks';
+  $strongarm->value = '0';
+
+  $export['upload_featured_blocks'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'upload_page';
   $strongarm->value = '1';
 
   $export['upload_page'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_batch_limit';
-  $strongarm->value = '100';
-
-  $export['xmlsitemap_batch_limit'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_chunk_size';
-  $strongarm->value = 'auto';
-
-  $export['xmlsitemap_chunk_size'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_developer_mode';
-  $strongarm->value = 0;
-
-  $export['xmlsitemap_developer_mode'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_engines_custom_urls';
-  $strongarm->value = '';
-
-  $export['xmlsitemap_engines_custom_urls'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_engines_engines';
-  $strongarm->value = array(
-    1 => 'bing',
-    2 => 'google',
-  );
-
-  $export['xmlsitemap_engines_engines'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_engines_minimum_lifetime';
-  $strongarm->value = '86400';
-
-  $export['xmlsitemap_engines_minimum_lifetime'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_engines_submit_last';
-  $strongarm->value = 1299364801;
-
-  $export['xmlsitemap_engines_submit_last'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_engines_submit_updated';
-  $strongarm->value = 1;
-
-  $export['xmlsitemap_engines_submit_updated'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_frontpage_changefreq';
-  $strongarm->value = '86400';
-
-  $export['xmlsitemap_frontpage_changefreq'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_frontpage_priority';
-  $strongarm->value = '1.0';
-
-  $export['xmlsitemap_frontpage_priority'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_generated_last';
-  $strongarm->value = 1307222959;
-
-  $export['xmlsitemap_generated_last'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_lastmod_format';
-  $strongarm->value = 'Y-m-d\\TH:i\\Z';
-
-  $export['xmlsitemap_lastmod_format'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_minimum_lifetime';
-  $strongarm->value = '86400';
-
-  $export['xmlsitemap_minimum_lifetime'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_path';
-  $strongarm->value = 'xmlsitemap';
-
-  $export['xmlsitemap_path'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_prefetch_aliases';
-  $strongarm->value = 1;
-
-  $export['xmlsitemap_prefetch_aliases'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = FALSE;
-
-  $export['xmlsitemap_regenerate_needed'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_xsl';
-  $strongarm->value = 1;
-
-  $export['xmlsitemap_xsl'] = $strongarm;
   return $export;
 }
