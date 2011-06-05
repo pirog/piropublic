@@ -1,4 +1,5 @@
 core = "6.x"
+dependencies[] = "adminrole"
 dependencies[] = "conditional_fields"
 dependencies[] = "contact"
 dependencies[] = "content_permissions"

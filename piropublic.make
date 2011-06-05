@@ -29,8 +29,6 @@ api = 2
 ; Core Modules
 ; --------
 projects[adminrole][subdir] = contrib
-projects[admin_menu][subdir] = contrib
-projects[auto_nodetitle][subdir] = contrib
 projects[cck][subdir] = contrib
 projects[content_taxonomy][subdir] = contrib
 projects[filefield][subdir] = contrib
@@ -44,16 +42,11 @@ projects[image][subdir] = contrib
 projects[imageapi][subdir] = contrib
 projects[imagecache][subdir] = contrib
 projects[emfield][subdir] = contrib
-projects[auto_nodetitle][subdir] = contrib
-projects[comment_notify][subdir] = contrib
-projects[google_analytics][subdir] = contrib
 projects[imce][subdir] = contrib
 projects[logintoboggan][subdir] = contrib
-projects[menu_block][subdir] = contrib
 projects[mollom][subdir] = contrib
 projects[pathauto][subdir] = contrib
 projects[path_redirect][subdir] = contrib
-projects[rules][subdir] = contrib
 projects[token][subdir] = contrib
 projects[imce_wysiwyg][subdir] = contrib
 projects[jquery_ui][subdir] = contrib
@@ -61,7 +54,6 @@ projects[vertical_tabs][subdir] = contrib
 projects[wysiwyg][subdir] = contrib
 projects[views][subdir] = contrib
 projects[views_slideshow][subdir] = contrib
-projects[xmlsitemap][subdir] = contrib
 projects[features_extra][subdir] = contrib
 projects[imagefield][subdir] = contrib
 projects[imagefield_crop][subdir] = contrib
@@ -70,12 +62,13 @@ projects[libraries][subdir] = contrib
 projects[media_youtube][subdir] = contrib
 projects[mollom][subdir] = contrib
 projects[nodequeue][subdir] = contrib
-projects[pathrules][subdir] = contrib
 projects[strongarm][subdir] = contrib
 projects[uuid][subdir] = contrib
 projects[uuid_features][subdir] = contrib
 projects[features][version] = "1.0"
 projects[features][subdir] = contrib
+projects[viewscarousel] = contrib
+projects[jcarousel] = contrib
 
 
 ; Patches
@@ -96,7 +89,7 @@ projects[features][patch][] = "http://drupal.org/files/issues/968826-features-me
 ; jQuery UI
 libraries[jquery_ui][download][type] = "git"
 libraries[jquery_ui][download][url] = "https://github.com/jquery/jquery-ui.git"
-libraries[jquery_ui][download][tag] = "1.6"
+libraries[jquery_ui][download][tag] = "1.7.4"
 libraries[jquery_ui][directory_name] = "jquery.ui"
 libraries[jquery_ui][destination] = "modules/contrib/jquery_ui"
 
