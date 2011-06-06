@@ -38,12 +38,20 @@ function piropublic_theme() {
  */
 function piropublic_preprocess_views_view_fields__legislative_efforts(&$variables) {
   // need to use custom template to fix link module target=blank fail
-  if (array_key_exists('target', $target = unserialize($variables['row']->node_data_field_legislative_field_featured_block_link_attributes))) {
-    $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('attributes' => array('target' => $target['target']), 'html' => 'true'));
+  $variables['fields']['field_feat_image_fid']->attributes = unserialize($variables['row']->node_data_field_legislative_field_featured_block_link_attributes);
+  if ($variables['fields']['field_feat_image_fid']->attributes['target']) {
+    $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('attributes' => array('target' => $variables['fields']['field_feat_image_fid']->attributes['target']), 'html' => 'true'));
   }
   else {
-    $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('html' => 'true'));
+    $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('attributes' => array('target' => $true['target']), 'html' => 'true'));
   }
+
+  if (!user_access('create featured_blocks content')) {
+    $variables = $variables;
+    unset($variables['fields']['nothing']);
+  }
+
+  $variables['admin_links'] = $variables['fields']['nothing']->content . $variables['fields']['edit_node']->content . $variables['fields']['delete_node']->content;
 }
 
 /**

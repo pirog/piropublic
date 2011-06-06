@@ -22,7 +22,7 @@
 
 <div id="featured_block">
   <div class="feature_image"><?php print $fields['field_feat_image_fid']->content; ?></div>
-  <div class="admin_links"><?php print $fields['nothing']->content; ?></div>
+  <div class="admin_links"><?php print $admin_links; ?></div>
 
 </div>
 

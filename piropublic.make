@@ -43,6 +43,7 @@ projects[imageapi][subdir] = contrib
 projects[imagecache][subdir] = contrib
 projects[emfield][subdir] = contrib
 projects[imce][subdir] = contrib
+projects[itweak_upload][subdir] = contrib
 projects[logintoboggan][subdir] = contrib
 projects[mollom][subdir] = contrib
 projects[pathauto][subdir] = contrib
