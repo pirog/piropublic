@@ -55,7 +55,7 @@ function piropublic_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'campaign-liberty-content-standards-0',
+    'path' => 'campaign-liberty-content-standards',
     'og_groups_both' => array(),
     'og_groups' => array(),
     'signup' => 0,

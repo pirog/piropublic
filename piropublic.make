@@ -51,6 +51,7 @@ projects[token][subdir] = contrib
 projects[imce_wysiwyg][subdir] = contrib
 projects[jquery_ui][subdir] = contrib
 projects[vertical_tabs][subdir] = contrib
+projects[wysiwyg][version] = "2.x-dev"
 projects[wysiwyg][subdir] = contrib
 projects[views][subdir] = contrib
 projects[views_slideshow][subdir] = contrib
