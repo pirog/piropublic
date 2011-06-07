@@ -51,7 +51,6 @@ projects[path_redirect][subdir] = contrib
 projects[token][subdir] = contrib
 projects[imce_wysiwyg][subdir] = contrib
 projects[jquery_ui][subdir] = contrib
-projects[vertical_tabs][subdir] = contrib
 projects[wysiwyg][version] = "2.x-dev"
 projects[wysiwyg][subdir] = contrib
 projects[views][subdir] = contrib
@@ -71,6 +70,8 @@ projects[features][version] = "1.0"
 projects[features][subdir] = contrib
 projects[viewscarousel] = contrib
 projects[jcarousel] = contrib
+projects[conditional_fields][version] = "2.x-dev"
+projects[conditional_fields][subdir] = contrib
 
 
 ; Patches

@@ -52,6 +52,17 @@ function piropublic_node_info() {
       'min_word_count' => '0',
       'help' => '',
     ),
+    'frontpage_banner' => array(
+      'name' => t('Frontpage Banner'),
+      'module' => 'features',
+      'description' => t('To add content to the front page banner'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '0',
+      'body_label' => '',
+      'min_word_count' => '0',
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Page'),
       'module' => 'features',
@@ -143,6 +154,80 @@ function piropublic_rules_defaults() {
               ),
             ),
             '#type' => 'action',
+          ),
+        ),
+        '#version' => 6003,
+      ),
+      'rules_redirect_frontpage_banner_creation_to_frontpage' => array(
+        '#type' => 'rule',
+        '#set' => 'event_node_presave',
+        '#label' => 'Redirect frontpage banner creation to frontpage',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'piropublic core',
+          'piropublic' => 'piropublic',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Saved content is Frontpage Banner',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'module' => 'Node',
+            ),
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'frontpage_banner' => 'frontpage_banner',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#type' => 'action',
+            '#settings' => array(
+              'path' => '<front>',
+              'query' => '',
+              'fragment' => '',
+              'force' => 0,
+              'immediate' => 0,
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'path' => array(
+                    '0' => ':global',
+                  ),
+                  'query' => array(
+                    '0' => ':global',
+                  ),
+                  'fragment' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+            '#name' => 'rules_action_drupal_goto',
+            '#info' => array(
+              'label' => 'Page redirect',
+              'module' => 'System',
+              'eval input' => array(
+                '0' => 'path',
+                '1' => 'query',
+                '2' => 'fragment',
+              ),
+            ),
+            '#weight' => 0,
           ),
         ),
         '#version' => 6003,

@@ -162,6 +162,15 @@ function piropublic_user_default_permissions() {
     ),
   );
 
+  // Exported permission: create frontpage_banner content
+  $permissions['create frontpage_banner content'] = array(
+    'name' => 'create frontpage_banner content',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'headquarters',
+    ),
+  );
+
   // Exported permission: create page content
   $permissions['create page content'] = array(
     'name' => 'create page content',
@@ -184,6 +193,15 @@ function piropublic_user_default_permissions() {
   // Exported permission: delete any featured_blocks content
   $permissions['delete any featured_blocks content'] = array(
     'name' => 'delete any featured_blocks content',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'headquarters',
+    ),
+  );
+
+  // Exported permission: delete any frontpage_banner content
+  $permissions['delete any frontpage_banner content'] = array(
+    'name' => 'delete any frontpage_banner content',
     'roles' => array(
       '0' => 'administrator',
       '1' => 'headquarters',
@@ -226,6 +244,15 @@ function piropublic_user_default_permissions() {
     ),
   );
 
+  // Exported permission: edit any frontpage_banner content
+  $permissions['edit any frontpage_banner content'] = array(
+    'name' => 'edit any frontpage_banner content',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'headquarters',
+    ),
+  );
+
   // Exported permission: edit any page content
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
@@ -258,6 +285,16 @@ function piropublic_user_default_permissions() {
     'name' => 'manage features',
     'roles' => array(
       '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: manipulate queues
+  $permissions['manipulate queues'] = array(
+    'name' => 'manipulate queues',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'headquarters',
+      '2' => 'staff',
     ),
   );
 
@@ -301,6 +338,15 @@ function piropublic_user_default_permissions() {
   // Exported permission: view imagecache featured_block
   $permissions['view imagecache featured_block'] = array(
     'name' => 'view imagecache featured_block',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+    ),
+  );
+
+  // Exported permission: view imagecache frontpage_banner
+  $permissions['view imagecache frontpage_banner'] = array(
+    'name' => 'view imagecache frontpage_banner',
     'roles' => array(
       '0' => 'administrator',
       '1' => 'anonymous user',
