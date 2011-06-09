@@ -84,6 +84,21 @@ function piropublic_default_fe_block_settings() {
     'cache' => '-1',
   );
 
+  $theme['views-frontpage_banner-block_1'] = array(
+    'module' => 'views',
+    'delta' => 'frontpage_banner-block_1',
+    'theme' => 'admin_theme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
   $theme['views-legislative_efforts-block_1'] = array(
     'module' => 'views',
     'delta' => 'legislative_efforts-block_1',
@@ -176,6 +191,21 @@ function piropublic_default_fe_block_settings() {
     'visibility' => '0',
     'pages' => '',
     'title' => '<none>',
+    'cache' => '-1',
+  );
+
+  $theme['views-frontpage_banner-block_1'] = array(
+    'module' => 'views',
+    'delta' => 'frontpage_banner-block_1',
+    'theme' => 'liberty',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
     'cache' => '-1',
   );
 

@@ -475,13 +475,6 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'form_build_id_frontpage_banner';
-  $strongarm->value = 'form-f66903035d4dcb508623017cda6fd161';
-
-  $export['form_build_id_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'image_default_path';
   $strongarm->value = 'images';
 
@@ -1062,6 +1055,63 @@ function piropublic_strongarm() {
   $strongarm->value = '0';
 
   $export['site_offline'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'theme_liberty_settings';
+  $strongarm->value = array(
+    'toggle_name' => 1,
+    'toggle_node_user_picture' => 1,
+    'toggle_comment_user_picture' => 1,
+    'toggle_search' => 1,
+    'toggle_favicon' => 1,
+    'toggle_primary_links' => 1,
+    'default_favicon' => 1,
+    'favicon_path' => 'sites/default/files/favicon.jpg',
+    'favicon_upload' => '',
+    'liberty_rebuild_registry' => 0,
+  );
+
+  $export['theme_liberty_settings'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'theme_settings';
+  $strongarm->value = array(
+    'toggle_logo' => 1,
+    'toggle_name' => 0,
+    'toggle_slogan' => 1,
+    'toggle_mission' => 1,
+    'toggle_node_user_picture' => 1,
+    'toggle_comment_user_picture' => 1,
+    'toggle_search' => 1,
+    'toggle_favicon' => 1,
+    'toggle_primary_links' => 1,
+    'toggle_secondary_links' => 1,
+    'toggle_node_info_donation' => 1,
+    'toggle_node_info_event' => 0,
+    'toggle_node_info_feed' => 1,
+    'toggle_node_info_image' => 1,
+    'toggle_node_info_news' => 1,
+    'toggle_node_info_page' => 1,
+    'toggle_node_info_product' => 0,
+    'toggle_node_info_room' => 0,
+    'toggle_node_info_schedule_item' => 0,
+    'toggle_node_info_session' => 0,
+    'toggle_node_info_sponsor' => 0,
+    'toggle_node_info_time_slot' => 0,
+    'toggle_node_info_webform' => 0,
+    'toggle_node_info_webform_report' => 1,
+    'toggle_node_info_video' => 1,
+    'default_logo' => 1,
+    'logo_path' => 'sites/default/files/logo.jpg',
+    'logo_upload' => '',
+    'default_favicon' => 0,
+    'favicon_path' => 'sites/default/files/favicon.jpg',
+    'favicon_upload' => '',
+  );
+
+  $export['theme_settings'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;

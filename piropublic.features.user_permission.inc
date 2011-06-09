@@ -288,6 +288,16 @@ function piropublic_user_default_permissions() {
     ),
   );
 
+  // Exported permission: manage frontpage_banner cycle order
+  $permissions['manage frontpage_banner cycle order'] = array(
+    'name' => 'manage frontpage_banner cycle order',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'headquarters',
+      '2' => 'staff',
+    ),
+  );
+
   // Exported permission: manipulate queues
   $permissions['manipulate queues'] = array(
     'name' => 'manipulate queues',

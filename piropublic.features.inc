@@ -14,6 +14,41 @@ function piropublic_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_default_fe_nodequeue_queue().
+ */
+function piropublic_default_fe_nodequeue_queue() {
+  $export = array();
+
+  $fe_nodequeue_queue = new stdClass;
+  $fe_nodequeue_queue->name = 'frontpage_banner_queue';
+  $fe_nodequeue_queue->title = 'Frontpage Banner List';
+  $fe_nodequeue_queue->subqueue_title = '';
+  $fe_nodequeue_queue->size = '4';
+  $fe_nodequeue_queue->link = 'add to front page banner';
+  $fe_nodequeue_queue->link_remove = 'remove from banner';
+  $fe_nodequeue_queue->owner = 'nodequeue';
+  $fe_nodequeue_queue->show_in_ui = '1';
+  $fe_nodequeue_queue->show_in_tab = '1';
+  $fe_nodequeue_queue->show_in_links = '1';
+  $fe_nodequeue_queue->reference = '0';
+  $fe_nodequeue_queue->reverse = '1';
+  $fe_nodequeue_queue->i18n = '0';
+  $fe_nodequeue_queue->types = array(
+    0 => 'frontpage_banner',
+  );
+  $fe_nodequeue_queue->roles = array(
+    0 => '5',
+    1 => '7',
+  );
+  $fe_nodequeue_queue->count = 0;
+  $fe_nodequeue_queue->machine_name = 'frontpage_banner_queue';
+
+  $export['frontpage_banner_queue'] = $fe_nodequeue_queue;
+
+  return $export;
+}
+
+/**
  * Implementation of hook_imagecache_default_presets().
  */
 function piropublic_imagecache_default_presets() {
