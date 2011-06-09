@@ -4,6 +4,7 @@
  * @file views-view-fields.tpl.php
  * Default simple view template to all the fields as a row.
  *
+ * - $admin_links: List of management tools for this node and queue.
  * - $media: Image or inline video.
  * - $source: Source of $media.
  * - $button: The button content.
@@ -21,33 +22,28 @@
  *
  * @ingroup views_templates
  */
-$fields = $fields;
-$row = $row;
-$view = $view;
-$media = $media;
 ?>
+
 <div class="promo_item">
   <div class="promo_left">
     <h1>
-      <?php //echo l($title, $link, $options); ?>
       <?php print $fields['title']->content; ?>
     </h1>
     <div class="teaser">
-      <?php //echo $body; ?>
       <?php print $fields['field_frontpage_banner_desc_value']->content; ?>
     </div>
     <div class="button-link">
-      <?php //echo l(t($buttonTitle), $link, $options);//echo $buttonLink; ?>
       <?php print $button; ?>
     </div>
     <div class="extra-links">
-      <?php //echo l(t('Join The Discussion'), 'http://' . $_SERVER['HTTP_HOST'] . '/comment/reply/' . $nid . '#comment-form'); ?>
-      <?php //echo l(t('Read More'), $readMore); ?>
     </div>
   </div>
   <div class="promo_right">
     <div class="media-wrapper <?php print $attr['classes']; ?>">
       <?php print $media; ?>
+    </div>
+    <div class="admin_links admin_top">
+      <?php print $admin_links; ?>
     </div>
     <div class="source">
       <?php print $source; ?>

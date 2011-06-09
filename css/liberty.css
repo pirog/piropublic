@@ -20,12 +20,17 @@
   color: #755753;
 }
 
+#banner_area .admin_links a:hover {
+  text-decoration: underline;
+}
+
+
 #banner_area .source a:hover {
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 #banner_area .teaser a:hover {
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 #banner_area .button-link a {
