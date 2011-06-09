@@ -434,7 +434,7 @@ function piropublic_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'emfield_swfobject_location';
-  $strongarm->value = 'sites/all/modules/contrib/swftools/shared/swfobject2/swfobject2.js';
+  $strongarm->value = 'mediaplayer/swfobject.js';
 
   $export['emfield_swfobject_location'] = $strongarm;
   $strongarm = new stdClass;
@@ -695,7 +695,7 @@ function piropublic_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_replace';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
 
   $export['jquery_update_replace'] = $strongarm;
   $strongarm = new stdClass;
@@ -905,7 +905,7 @@ function piropublic_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'media_youtube__use_jw_flv';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
 
   $export['media_youtube__use_jw_flv'] = $strongarm;
   $strongarm = new stdClass;

@@ -94,6 +94,12 @@ function piropublic_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-frontpage_banner-block_1' => array(
+          'module' => 'views',
+          'delta' => 'frontpage_banner-block_1',
+          'region' => 'banner',
+          'weight' => 0,
+        ),
         'views-legislative_efforts-block_1' => array(
           'module' => 'views',
           'delta' => 'legislative_efforts-block_1',

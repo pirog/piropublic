@@ -340,16 +340,17 @@ function piropublic_content_default_fields() {
     'field_name' => 'field_frontpage_banner_btntxt',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '5',
+      'parent' => 'group_frontpage_banner_lnkgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -375,7 +376,7 @@ function piropublic_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '0',
+    'text_processing' => '1',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
@@ -402,9 +403,10 @@ function piropublic_content_default_fields() {
     'field_name' => 'field_frontpage_banner_desc',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '-1',
+      'parent' => '',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -465,16 +467,17 @@ function piropublic_content_default_fields() {
     'field_name' => 'field_frontpage_banner_embed',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '4',
+      'parent' => 'group_frontpage_banner_vidgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -527,16 +530,17 @@ function piropublic_content_default_fields() {
     'field_name' => 'field_frontpage_banner_foxnews',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '3',
+      'parent' => 'group_frontpage_banner_vidgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -565,7 +569,7 @@ function piropublic_content_default_fields() {
     'widget' => array(
       'video_width' => '610',
       'video_height' => '350',
-      'video_autoplay' => 0,
+      'video_autoplay' => 1,
       'preview_width' => '610',
       'preview_height' => '350',
       'preview_autoplay' => 0,
@@ -610,16 +614,17 @@ function piropublic_content_default_fields() {
     'field_name' => 'field_frontpage_banner_img',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '3',
+      'parent' => 'group_frontpage_banner_lnkgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -649,17 +654,17 @@ function piropublic_content_default_fields() {
     'list_default' => 1,
     'description_field' => '0',
     'widget' => array(
-      'resolution' => '610x310',
+      'resolution' => '610x350',
       'enforce_ratio' => 1,
       'croparea' => '700x700',
-      'enforce_minimum' => 1,
+      'enforce_minimum' => 0,
       'file_extensions' => 'png gif jpg jpeg',
       'file_path' => '',
       'progress_indicator' => 'bar',
       'max_filesize_per_file' => '2M',
       'max_filesize_per_node' => '2M',
       'max_resolution' => '0',
-      'min_resolution' => '610x310',
+      'min_resolution' => '500x300',
       'alt' => '',
       'custom_alt' => 0,
       'title' => '',
@@ -677,7 +682,7 @@ function piropublic_content_default_fields() {
         'timestamp' => 1307470780,
         'fid' => '80',
       ),
-      'use_default_image' => 1,
+      'use_default_image' => 0,
       'label' => 'Banner Image',
       'weight' => '3',
       'description' => '',
@@ -691,16 +696,17 @@ function piropublic_content_default_fields() {
     'field_name' => 'field_frontpage_banner_imgsrc',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '4',
+      'parent' => 'group_frontpage_banner_lnkgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -753,16 +759,17 @@ function piropublic_content_default_fields() {
     'field_name' => 'field_frontpage_banner_link',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '2',
+      'parent' => 'group_frontpage_banner_lnkgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -825,16 +832,17 @@ function piropublic_content_default_fields() {
     'field_name' => 'field_frontpage_banner_type',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '-2',
+      'parent' => '',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -885,16 +893,17 @@ video|Video',
     'field_name' => 'field_frontpage_banner_videotype',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '1',
+      'parent' => 'group_frontpage_banner_vidgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -946,9 +955,10 @@ other|Other (Embed Code)',
     'field_name' => 'field_frontpage_banner_vidsrc',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '5',
+      'parent' => 'group_frontpage_banner_vidgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -1008,16 +1018,17 @@ other|Other (Embed Code)',
     'field_name' => 'field_frontpage_banner_youtube',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
+      'weight' => '2',
+      'parent' => 'group_frontpage_banner_vidgrp',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -1046,10 +1057,10 @@ other|Other (Embed Code)',
     'widget' => array(
       'video_width' => '610',
       'video_height' => '350',
-      'video_autoplay' => 0,
+      'video_autoplay' => 1,
       'preview_width' => '610',
       'preview_height' => '350',
-      'preview_autoplay' => 0,
+      'preview_autoplay' => 1,
       'thumbnail_width' => '610',
       'thumbnail_height' => '350',
       'thumbnail_default_path' => '',

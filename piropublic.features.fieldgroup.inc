@@ -66,15 +66,17 @@ function piropublic_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '2',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
+          'format' => 'hidden',
           'exclude' => 0,
         ),
         'full' => array(
-          'format' => 'fieldset',
+          'format' => 'hidden',
           'exclude' => 0,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -91,7 +93,6 @@ function piropublic_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
     'weight' => '2',
@@ -115,15 +116,17 @@ function piropublic_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '0',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
+          'format' => 'hidden',
           'exclude' => 0,
         ),
         'full' => array(
-          'format' => 'fieldset',
+          'format' => 'hidden',
           'exclude' => 0,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -140,7 +143,6 @@ function piropublic_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
     'weight' => '0',
