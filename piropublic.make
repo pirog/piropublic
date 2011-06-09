@@ -61,6 +61,7 @@ projects[imagefield_crop][subdir] = contrib
 projects[imce_kama][subdir] = contrib
 projects[libraries][subdir] = contrib
 projects[media_youtube][subdir] = contrib
+projects[media_foxnews][subdir] = contrib
 projects[mollom][subdir] = contrib
 projects[nodequeue][subdir] = contrib
 projects[strongarm][subdir] = contrib

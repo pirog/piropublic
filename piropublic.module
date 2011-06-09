@@ -7,9 +7,9 @@ include_once('piropublic.features.inc');
  * Implementation of hook_init()
  */
 function piropublic_init() {
-  if (variable_get('theme_default', 'garland')=='liberty'){
-    drupal_add_css(drupal_get_path('module', 'piropublic') . '/css/header_menu.css');
-    drupal_add_css(drupal_get_path('module', 'piropublic') . '/css/featured_block.css');
+  drupal_add_css(drupal_get_path('module', 'piropublic') . '/css/piropublic.css');
+  if (file_exists(drupal_get_path('module', 'piropublic') . '/css/' . variable_get('theme_default', 'garland'). '.css')) {
+    drupal_add_css(drupal_get_path('module', 'piropublic') . '/css/' . variable_get('theme_default', 'garland'). '.css');
   }
 }
 
@@ -30,6 +30,17 @@ function piropublic_theme() {
       ),
       'arguments' => array('view' => NULL, 'options' => NULL, 'row' => NULL),
     ),
+  	'views_view_fields__frontpage_banner' => array(
+      'template' => 'views-view-fields--frontpage-banner',
+      'original hook' => 'views_view_fields',
+      'path' => drupal_get_path('module', 'piropublic') . '/templates/',
+   	  'preprocess functions' => array(
+      	'template_preprocess',
+      	'template_preprocess_views_view_fields',
+        'piropublic_preprocess_views_view_fields__frontpage_banner',
+      ),
+      'arguments' => array('view' => NULL, 'options' => NULL, 'row' => NULL),
+    ),
   );
 }
 
@@ -39,12 +50,9 @@ function piropublic_theme() {
 function piropublic_preprocess_views_view_fields__legislative_efforts(&$variables) {
   // need to use custom template to fix link module target=blank fail
   $variables['fields']['field_feat_image_fid']->attributes = unserialize($variables['row']->node_data_field_legislative_field_featured_block_link_attributes);
-  if ($variables['fields']['field_feat_image_fid']->attributes['target']) {
-    $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('attributes' => array('target' => $variables['fields']['field_feat_image_fid']->attributes['target']), 'html' => 'true'));
-  }
-  else {
-    $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('attributes' => array('target' => $true['target']), 'html' => 'true'));
-  }
+  $variables['fields']['field_feat_image_fid']->attributes['target'] ?
+    $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('attributes' => array('target' => $variables['fields']['field_feat_image_fid']->attributes['target']), 'html' => 'true')) :
+    $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('attributes' => array('target' => '_self'), 'html' => 'true'));
 
   if (!user_access('create featured_blocks content')) {
     $variables = $variables;
@@ -52,6 +60,50 @@ function piropublic_preprocess_views_view_fields__legislative_efforts(&$variable
   }
 
   $variables['admin_links'] = $variables['fields']['nothing']->content . $variables['fields']['edit_node']->content . $variables['fields']['delete_node']->content;
+}
+
+/**
+ * Implements hook_preprocess()
+ */
+function piropublic_preprocess_views_view_fields__frontpage_banner(&$variables) {
+  // need to use custom template to fix link module target=blank fail
+  $variables = $variables;
+  if ($variables['fields']['field_frontpage_banner_type_value']->raw == 'video') {
+    $variables['video'] = TRUE;
+  }
+  if (isset($variables['video'])) {
+    drupal_add_js(drupal_get_path('module', 'piropublic') . '/js/watch-button.js');
+
+    $variables = $variables;
+
+    $variables['video'] = $variables['fields']['field_frontpage_banner_videotype_value']->raw;
+    $appender = 'node_data_field_frontpage_banner_img_field_frontpage_banner_' .$variables['video']. '_value';
+    $variables['button'] = l('WATCH <em>the</em> VIDEO', '/emvideo/modal/' .$variables['row']->nid. '/610/350/field_frontpage_banner_' .$variables['video']. '/' .$variables['video']. '/' . $variables['row']->$appender, array('attributes' => array('class' => 'emvideo-watch-button'), 'html' => 'true'));
+
+    $variables['media'] = $variables['fields']['field_frontpage_banner_' .$variables['video']. '_embed']->content;
+    $variables['source'] = $variables['fields']['field_frontpage_banner_' .$variables['video']. '_provider']->content;
+
+    if ($variables['video'] == 'other') {
+      // need better solution for next line;
+      $variables['media'] = t("!embed", array('!embed' => $variables['fields']['field_frontpage_banner_embed_value']->raw));
+      $variables['source'] = $variables['fields']['field_frontpage_banner_vidsrc_value']->content;
+      unset($variables['button']);
+      $variables['attr']['classes'] = 'embed-other-wrapper';
+    }
+  }
+  else {
+    $variables['media'] = $variables['fields']['field_frontpage_banner_img_fid']->content;
+    $variables['source'] = $variables['fields']['field_frontpage_banner_imgsrc_value']->content;
+
+    $variables['fields']['title']->attributes = unserialize($variables['row']->node_data_field_frontpage_banner_img_field_frontpage_banner_link_attributes);
+    $variables['fields']['title']->attributes['target'] ?
+      $variables['fields']['title']->attributes['target'] : $variables['fields']['title']->attributes['target'] = '_self';
+    $variables['fields']['title']->content = l($variables['fields']['title']->content, $variables['fields']['field_frontpage_banner_link_url']->content, array('attributes' => array('target' => $variables['fields']['title']->attributes['target']), 'html' => 'true'));
+
+     $variables['fields']['field_frontpage_banner_btntxt_value']->content ?
+      $variables['button'] = $variables['fields']['field_frontpage_banner_btntxt_value']->content : $variables['button'] = t("READ MORE");
+    $variables['button'] =  l($variables['button'], $variables['fields']['field_frontpage_banner_link_url']->content, array('attributes' => array('target' => $variables['fields']['title']->attributes['target']), 'html' => 'true'));
+  }
 }
 
 /**

@@ -32,6 +32,20 @@ function piropublic_imagecache_default_presets() {
         ),
       ),
     ),
+    'frontpage_banner' => array(
+      'presetname' => 'frontpage_banner',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '610',
+            'height' => '350',
+          ),
+        ),
+      ),
+    ),
   );
   return $items;
 }

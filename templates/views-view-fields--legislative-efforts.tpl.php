@@ -4,6 +4,7 @@
  * @file views-view-fields.tpl.php
  * Default simple view template to all the fields as a row.
  *
+ * - $admin_links: links for node admin
  * - $view: The view in use.
  * - $fields: an array of $field objects. Each one contains:
  *   - $field->content: The output of the field.
@@ -23,6 +24,5 @@
 <div id="featured_block">
   <div class="feature_image"><?php print $fields['field_feat_image_fid']->content; ?></div>
   <div class="admin_links"><?php print $admin_links; ?></div>
-
 </div>
 
