@@ -145,7 +145,7 @@ function piropublic_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '0',
+    'weight' => '1',
     'fields' => array(
       '0' => 'field_frontpage_banner_videotype',
       '1' => 'field_frontpage_banner_youtube',
