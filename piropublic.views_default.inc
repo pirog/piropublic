@@ -209,7 +209,7 @@ function piropublic_views_default_views() {
       'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'video_replace',
+      'format' => 'video_video',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -221,6 +221,9 @@ function piropublic_views_default_views() {
       'table' => 'node_data_field_frontpage_banner_foxnews',
       'field' => 'field_frontpage_banner_foxnews_embed',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
     'field_frontpage_banner_foxnews_provider' => array(
       'label' => '',
@@ -819,9 +822,7 @@ function piropublic_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('cache', array(
-    'type' => 'time',
-    'results_lifespan' => '1800',
-    'output_lifespan' => '1800',
+    'type' => 'none',
   ));
   $handler->override_option('items_per_page', 4);
   $handler->override_option('style_plugin', 'slideshow');
