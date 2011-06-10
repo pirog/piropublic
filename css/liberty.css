@@ -46,6 +46,18 @@
 }
 
 #banner_area .button-link {
+  background: url(../img/btn-banner.gif) 0 0 no-repeat;
+  width: 160px;
+  height: 30px;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  color: #3e3825;
+  font-family: Georgia, sans-serif;
+  font-weight: bolder;
+}
+
+#banner_area .button-link {
   margin-bottom: 25px;
 }
 

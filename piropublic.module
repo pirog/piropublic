@@ -91,7 +91,7 @@ function piropublic_preprocess_views_view_fields__frontpage_banner(&$variables) 
     drupal_add_js(drupal_get_path('module', 'piropublic') . '/js/watch-button.js');
     $variables['video'] = $variables['fields']['field_frontpage_banner_videotype_value']->raw;
     $appender = 'node_data_field_frontpage_banner_img_field_frontpage_banner_' .$variables['video']. '_value';
-    $variables['button'] = l(t("!text", array('!text' => 'WATCH <em>the</em> VIDEO')), '/emvideo/modal/' .$variables['row']->nid. '/610/350/field_frontpage_banner_' .$variables['video']. '/' .$variables['video']. '/' . $variables['row']->$appender, array('attributes' => array('class' => 'emvideo-watch-button'), 'html' => 'true'));
+    $variables['button'] = l(t("!text", array('!text' => 'CLICK <em>the</em> VIDEO')), '/emvideo/modal/' .$variables['row']->nid. '/610/350/field_frontpage_banner_' .$variables['video']. '/' .$variables['video']. '/' . $variables['row']->$appender, array('attributes' => array('class' => 'emvideo-watch-button'), 'html' => 'true'));
 
     $variables['media'] = $variables['fields']['field_frontpage_banner_' .$variables['video']. '_embed']->content;
     $variables['source'] = $variables['fields']['field_frontpage_banner_' .$variables['video']. '_provider']->content;
@@ -100,7 +100,7 @@ function piropublic_preprocess_views_view_fields__frontpage_banner(&$variables) 
       // need better solution for next line;
       $variables['media'] = t("!embed", array('!embed' => $variables['fields']['field_frontpage_banner_embed_value']->raw));
       $variables['source'] = $variables['fields']['field_frontpage_banner_vidsrc_value']->content;
-      unset($variables['button']);
+      $variables['button'] = t("!text", array('!text' => 'CLICK <em>the</em> VIDEO'));
       $variables['attr']['classes'] = 'embed-other-wrapper';
     }
   }
