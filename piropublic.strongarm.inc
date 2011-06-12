@@ -1155,6 +1155,14 @@ function piropublic_strongarm() {
       'group_frontpage_banner_vidgrp' => 0,
       'group_frontpage_banner_lnkgrp' => 0,
     ),
+    'staff_node_form' => array(
+      'menu' => 'menu',
+      'author' => 'author',
+      'revision_information' => 'revision_information',
+      'options' => 'options',
+      'path' => 'path',
+      'comment_settings' => 'comment_settings',
+    ),
   );
 
   $export['vertical_tabs_forms'] = $strongarm;

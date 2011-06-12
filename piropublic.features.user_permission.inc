@@ -75,7 +75,6 @@ function piropublic_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'headquarters',
     ),
   );
 
@@ -186,7 +185,6 @@ function piropublic_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'headquarters',
     ),
   );
 
@@ -322,7 +320,6 @@ function piropublic_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'headquarters',
     ),
   );
 
@@ -378,7 +375,6 @@ function piropublic_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'headquarters',
     ),
   );
 

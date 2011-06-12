@@ -9,21 +9,6 @@ function piropublic_default_fe_block_settings() {
   // admin_theme
   $theme = array();
 
-  $theme['block-contact_information'] = array(
-    'module' => 'block',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Contact Information',
-    'cache' => '-1',
-    'machine_name' => 'contact_information',
-  );
-
   $theme['block-footer_copyright'] = array(
     'module' => 'block',
     'theme' => 'admin_theme',
@@ -118,21 +103,6 @@ function piropublic_default_fe_block_settings() {
 
   // liberty
   $theme = array();
-
-  $theme['block-contact_information'] = array(
-    'module' => 'block',
-    'theme' => 'liberty',
-    'status' => 0,
-    'weight' => '-1',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Contact Information',
-    'cache' => '-1',
-    'machine_name' => 'contact_information',
-  );
 
   $theme['block-footer_copyright'] = array(
     'module' => 'block',

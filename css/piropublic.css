@@ -163,7 +163,7 @@
 
 /* Admin Links */
 
-#banner_area .edit {
+.front #banner_area .edit {
   display:none;
 }
 

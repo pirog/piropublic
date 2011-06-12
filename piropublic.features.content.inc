@@ -377,7 +377,7 @@ function piropublic_content_default_fields() {
     'module' => 'text',
     'active' => '1',
     'text_processing' => '1',
-    'max_length' => '',
+    'max_length' => '17',
     'allowed_values' => '',
     'allowed_values_php' => '',
     'widget' => array(
@@ -386,6 +386,7 @@ function piropublic_content_default_fields() {
       'default_value' => array(
         '0' => array(
           'value' => '',
+          'format' => '1',
           '_error_element' => 'default_value_widget][field_frontpage_banner_btntxt][0][value',
         ),
       ),
