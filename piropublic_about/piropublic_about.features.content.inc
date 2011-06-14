@@ -6,89 +6,6 @@
 function piropublic_about_content_default_fields() {
   $fields = array();
 
-  // Exported field: field_authoruser
-  $fields['staff-field_authoruser'] = array(
-    'field_name' => 'field_authoruser',
-    'type_name' => 'staff',
-    'display_settings' => array(
-      'weight' => 0,
-      'parent' => '',
-      'label' => array(
-        'format' => 'hidden',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'userreference',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'userreference',
-    'active' => '1',
-    'referenceable_roles' => array(
-      '15' => 15,
-      '2' => 0,
-      '3' => 0,
-      '4' => 0,
-      '8' => 0,
-      '14' => 0,
-      '6' => 0,
-      '13' => 0,
-      '7' => 0,
-      '9' => 0,
-      '5' => 0,
-      '12' => 0,
-      '10' => 0,
-      '11' => 0,
-    ),
-    'referenceable_status' => 1,
-    'advanced_view' => '--',
-    'advanced_view_args' => '',
-    'widget' => array(
-      'autocomplete_match' => 'contains',
-      'size' => '60',
-      'reverse_link' => 1,
-      'default_value' => array(
-        '0' => array(
-          'uid' => NULL,
-          '_error_element' => 'default_value_widget][field_authoruser][0][uid][uid',
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'User Account',
-      'weight' => '1',
-      'description' => 'If this staff member has a user account',
-      'type' => 'userreference_autocomplete',
-      'module' => 'userreference',
-    ),
-  );
-
   // Exported field: field_brief_bio
   $fields['staff-field_brief_bio'] = array(
     'field_name' => 'field_brief_bio',
@@ -134,7 +51,7 @@ function piropublic_about_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '1',
+    'text_processing' => '0',
     'max_length' => '400',
     'allowed_values' => '',
     'allowed_values_php' => '',
@@ -144,7 +61,7 @@ function piropublic_about_content_default_fields() {
       'default_value' => array(
         '0' => array(
           'value' => '',
-          'format' => '2',
+          'format' => '1',
           '_error_element' => 'default_value_widget][field_brief_bio][0][value',
         ),
       ),
@@ -217,75 +134,10 @@ function piropublic_about_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Job Title',
-      'weight' => '-4',
+      'weight' => '-3',
       'description' => 'What is your job title at C4L?',
       'type' => 'text_textfield',
       'module' => 'text',
-    ),
-  );
-
-  // Exported field: field_staff_option
-  $fields['staff-field_staff_option'] = array(
-    'field_name' => 'field_staff_option',
-    'type_name' => 'staff',
-    'display_settings' => array(
-      'weight' => '1',
-      'parent' => '',
-      'label' => array(
-        'format' => 'above',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'text',
-    'required' => '0',
-    'multiple' => '1',
-    'module' => 'text',
-    'active' => '1',
-    'text_processing' => '0',
-    'max_length' => '',
-    'allowed_values' => 'Link my staff profile to my user profile
-Show my recent blog entries',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'default_value' => array(
-        '0' => array(
-          'value' => '',
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Options',
-      'weight' => '2',
-      'description' => '',
-      'type' => 'optionwidgets_buttons',
-      'module' => 'optionwidgets',
     ),
   );
 
@@ -376,13 +228,72 @@ Show my recent blog entries',
     ),
   );
 
+  // Exported field: field_staff_type
+  $fields['staff-field_staff_type'] = array(
+    'field_name' => 'field_staff_type',
+    'type_name' => 'staff',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '1',
+    'multiple' => '2',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => 'board|Board of Directors
+staff|Staff',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Board/Staff/Both?',
+      'weight' => '-4',
+      'description' => '',
+      'type' => 'optionwidgets_buttons',
+      'module' => 'optionwidgets',
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Board/Staff/Both?');
   t('Brief Bio');
   t('Job Title');
-  t('Options');
   t('Staff Photo');
-  t('User Account');
 
   return $fields;
 }

@@ -13,9 +13,9 @@ function piropublic_perm() {
  * Implementation of hook_init()
  */
 function piropublic_init() {
-  drupal_add_css(drupal_get_path('module', 'piropublic') . '/css/piropublic.css');
-  if (file_exists(drupal_get_path('module', 'piropublic') . '/css/' . variable_get('theme_default', 'garland'). '.css')) {
-    drupal_add_css(drupal_get_path('module', 'piropublic') . '/css/' . variable_get('theme_default', 'garland'). '.css');
+  drupal_add_css(drupal_get_path('module', 'piropublic') . '/theme/css/piropublic.css');
+  if (file_exists(drupal_get_path('module', 'piropublic') . '/theme/css/' . variable_get('theme_default', 'garland'). '.css')) {
+    drupal_add_css(drupal_get_path('module', 'piropublic') . '/theme/css/' . variable_get('theme_default', 'garland'). '.css');
   }
 }
 
@@ -28,7 +28,7 @@ function piropublic_theme() {
   	'views_view_fields__legislative_efforts' => array(
       'template' => 'views-view-fields--legislative-efforts',
       'original hook' => 'views_view_fields',
-      'path' => drupal_get_path('module', 'piropublic') . '/templates/',
+      'path' => drupal_get_path('module', 'piropublic') . '/theme/templates/',
    	  'preprocess functions' => array(
       	'template_preprocess',
       	'template_preprocess_views_view_fields',
@@ -39,7 +39,7 @@ function piropublic_theme() {
   	'views_view_fields__frontpage_banner' => array(
       'template' => 'views-view-fields--frontpage-banner',
       'original hook' => 'views_view_fields',
-      'path' => drupal_get_path('module', 'piropublic') . '/templates/',
+      'path' => drupal_get_path('module', 'piropublic') . '/theme/templates/',
    	  'preprocess functions' => array(
       	'template_preprocess',
       	'template_preprocess_views_view_fields',
@@ -61,7 +61,6 @@ function piropublic_preprocess_views_view_fields__legislative_efforts(&$variable
     $variables['fields']['field_feat_image_fid']->content = l($variables['fields']['field_feat_image_fid']->content, $variables['fields']['field_featured_block_link_url']->content, array('attributes' => array('target' => '_self'), 'html' => 'true'));
 
   if (!user_access('create featured_blocks content')) {
-    $variables = $variables;
     unset($variables['fields']['nothing']);
   }
 
@@ -74,7 +73,6 @@ function piropublic_preprocess_views_view_fields__legislative_efforts(&$variable
 function piropublic_preprocess_views_view_fields__frontpage_banner(&$variables) {
   // need to use custom template to fix link module target=blank fail
   if (!user_access('create frontpage_banner content')) {
-    $variables = $variables;
     unset($variables['fields']['nothing']);
   }
 
@@ -88,7 +86,7 @@ function piropublic_preprocess_views_view_fields__frontpage_banner(&$variables) 
     $variables['video'] = TRUE;
   }
   if (isset($variables['video'])) {
-    drupal_add_js(drupal_get_path('module', 'piropublic') . '/js/watch-button.js');
+    drupal_add_js(drupal_get_path('module', 'piropublic') . '/theme/js/watch-button.js');
     $variables['video'] = $variables['fields']['field_frontpage_banner_videotype_value']->raw;
     $appender = 'node_data_field_frontpage_banner_img_field_frontpage_banner_' .$variables['video']. '_value';
     $variables['button'] = l(t("!text", array('!text' => 'CLICK <em>the</em> VIDEO')), '/emvideo/modal/' .$variables['row']->nid. '/610/350/field_frontpage_banner_' .$variables['video']. '/' .$variables['video']. '/' . $variables['row']->$appender, array('attributes' => array('class' => 'emvideo-watch-button'), 'html' => 'true'));

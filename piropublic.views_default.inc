@@ -688,7 +688,7 @@ function piropublic_views_default_views() {
       'field' => 'nodequeue_links',
       'relationship' => 'none',
     ),
-    'qid' => array(
+    'sqid' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -718,15 +718,13 @@ function piropublic_views_default_views() {
       'prefix' => '',
       'suffix' => '',
       'exclude' => 0,
-      'id' => 'qid',
-      'table' => 'nodequeue_nodes',
-      'field' => 'qid',
-      'relationship' => 'nodequeue_rel_queue_name',
-    ),
-    'sqid' => array(
       'id' => 'sqid',
       'table' => 'nodequeue_nodes',
       'field' => 'sqid',
+      'relationship' => 'nodequeue_rel_queue_name',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
     'nothing' => array(
       'label' => '',
@@ -824,6 +822,7 @@ function piropublic_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('empty_format', '4');
   $handler->override_option('items_per_page', 4);
   $handler->override_option('style_plugin', 'slideshow');
   $handler->override_option('style_options', array(
@@ -1126,21 +1125,20 @@ function piropublic_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'Legislative Efforts');
+  $handler->override_option('empty_format', '4');
   $handler->override_option('items_per_page', 0);
-  $handler->override_option('style_plugin', 'viewscarousel');
+  $handler->override_option('style_plugin', 'jcarousel');
   $handler->override_option('style_options', array(
-    'grouping' => '',
-    'skin' => 'ie7',
-    'skin_path' => '',
-    'vertical' => 0,
-    'start' => '1',
-    'offset' => '',
-    'scroll' => '1',
-    'visible' => 1,
-    'animation' => 'slow',
-    'easing' => '',
+    'wrap' => 'circular',
+    'skin' => 'default',
+    'visible' => '1',
+    'scroll' => '',
     'auto' => '0',
-    'wrap' => 'both',
+    'animation' => '',
+    'easing' => '',
+    'start' => '1',
+    'autoPause' => 1,
+    'vertical' => 0,
   ));
   $handler = $view->new_display('block', 'Block', 'block_1');
   $handler->override_option('block_description', 'Legislative Efforts');

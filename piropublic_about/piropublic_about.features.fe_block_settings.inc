@@ -30,7 +30,7 @@ function piropublic_about_default_fe_block_settings() {
     'status' => 0,
     'weight' => '0',
     'region' => '',
-    'custom' => '0',
+    'custom' => '2',
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -67,6 +67,36 @@ function piropublic_about_default_fe_block_settings() {
     'pages' => '',
     'title' => '',
     'cache' => '-1',
+  );
+
+  $theme['views--exp-faq-default'] = array(
+    'module' => 'views',
+    'delta' => '-exp-faq-default',
+    'theme' => 'admin_theme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['views--exp-faq-page_1'] = array(
+    'module' => 'views',
+    'delta' => '-exp-faq-page_1',
+    'theme' => 'admin_theme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'Filter By Question Type',
+    'cache' => '1',
   );
 
   $export['admin_theme'] = $theme;
@@ -95,7 +125,7 @@ function piropublic_about_default_fe_block_settings() {
     'status' => 0,
     'weight' => '0',
     'region' => '',
-    'custom' => '0',
+    'custom' => '2',
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -132,6 +162,36 @@ function piropublic_about_default_fe_block_settings() {
     'pages' => '',
     'title' => '',
     'cache' => '-1',
+  );
+
+  $theme['views--exp-faq-default'] = array(
+    'module' => 'views',
+    'delta' => '-exp-faq-default',
+    'theme' => 'liberty',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['views--exp-faq-page_1'] = array(
+    'module' => 'views',
+    'delta' => '-exp-faq-page_1',
+    'theme' => 'liberty',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'Filter By Question Type',
+    'cache' => '1',
   );
 
   $export['liberty'] = $theme;

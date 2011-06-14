@@ -18,30 +18,18 @@ function piropublic_about_views_default_views() {
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
-    'field_authoruser_uid' => array(
-      'label' => 'User Account',
-      'required' => 0,
-      'delta' => -1,
-      'id' => 'field_authoruser_uid',
-      'table' => 'node_data_field_authoruser',
-      'field' => 'field_authoruser_uid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'nodequeue_rel' => array(
+    'nodequeue_rel_queue_name' => array(
       'label' => 'queue',
-      'required' => 0,
+      'required' => 1,
       'limit' => 1,
-      'qids' => array(
-        '3' => 3,
-        '1' => 0,
-        '2' => 0,
+      'names' => array(
+        'board_of_directors' => 'board_of_directors',
+        'frontpage_banner_queue' => 0,
+        'staff' => 0,
       ),
-      'id' => 'nodequeue_rel',
+      'id' => 'nodequeue_rel_queue_name',
       'table' => 'node',
-      'field' => 'nodequeue_rel',
+      'field' => 'nodequeue_rel_queue_name',
       'override' => array(
         'button' => 'Override',
       ),
@@ -49,6 +37,35 @@ function piropublic_about_views_default_views() {
     ),
   ));
   $handler->override_option('fields', array(
+    'view_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'strip_tags' => 0,
+        'html' => 0,
+      ),
+      'text' => '...Read More',
+      'exclude' => 0,
+      'id' => 'view_node',
+      'table' => 'node',
+      'field' => 'view_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
     'field_staff_photo_fid' => array(
       'label' => '',
       'alter' => array(
@@ -152,7 +169,7 @@ function piropublic_about_views_default_views() {
       ),
       'relationship' => 'none',
     ),
-    'field_brief_bio_value' => array(
+    'edit_node' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -163,33 +180,29 @@ function piropublic_about_views_default_views() {
         'alt' => '',
         'prefix' => '',
         'suffix' => '',
+        'target' => '',
         'help' => '',
         'trim' => 0,
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'strip_tags' => 0,
         'html' => 0,
+        'strip_tags' => 0,
       ),
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'plain',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => 'edit',
       'exclude' => 0,
-      'id' => 'field_brief_bio_value',
-      'table' => 'node_data_field_brief_bio',
-      'field' => 'field_brief_bio_value',
+      'id' => 'edit_node',
+      'table' => 'node',
+      'field' => 'edit_node',
       'override' => array(
         'button' => 'Override',
       ),
       'relationship' => 'none',
     ),
-    'view_node' => array(
+    'delete_node' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -200,19 +213,56 @@ function piropublic_about_views_default_views() {
         'alt' => '',
         'prefix' => '',
         'suffix' => '',
+        'target' => '',
         'help' => '',
         'trim' => 0,
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'strip_tags' => 0,
         'html' => 0,
+        'strip_tags' => 0,
       ),
-      'text' => '...Read More',
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => 'delete',
       'exclude' => 0,
-      'id' => 'view_node',
+      'id' => 'delete_node',
       'table' => 'node',
-      'field' => 'view_node',
+      'field' => 'delete_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'nodequeue_links' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => '',
+      'exclude' => 0,
+      'id' => 'nodequeue_links',
+      'table' => 'node',
+      'field' => 'nodequeue_links',
       'override' => array(
         'button' => 'Override',
       ),
@@ -225,7 +275,7 @@ function piropublic_about_views_default_views() {
       'id' => 'position',
       'table' => 'nodequeue_nodes',
       'field' => 'position',
-      'relationship' => 'nodequeue_rel',
+      'relationship' => 'nodequeue_rel_queue_name',
       'override' => array(
         'button' => 'Override',
       ),
@@ -268,18 +318,49 @@ function piropublic_about_views_default_views() {
       ),
       'relationship' => 'none',
     ),
+    'field_staff_type_value_many_to_one' => array(
+      'operator' => 'or',
+      'value' => array(
+        'board' => 'board',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'field_staff_type_value_many_to_one',
+      'table' => 'node_data_field_staff_type',
+      'field' => 'field_staff_type_value_many_to_one',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
   ));
   $handler->override_option('cache', array(
-    'type' => 'time',
-    'results_lifespan' => 3600,
-    'output_lifespan' => 3600,
+    'type' => 'none',
   ));
-  $handler->override_option('title', 'Campaign for Liberty Staff');
+  $handler->override_option('title', 'Board of Directors');
+  $handler->override_option('empty', '<?php  
+if (user_access(\'create staff content\')) {
+    drupal_set_message(t(\'A staff member has not been added yet.\') . \' \' . l(t(\'Click here to add one.\'), \'node/add/staff\'));
+}
+?>');
+  $handler->override_option('empty_format', '4');
   $handler->override_option('items_per_page', 0);
-  $handler = $view->new_display('page', 'Campaign for Liberty Staff', 'page_1');
+  $handler->override_option('style_plugin', 'grid');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'columns' => '2',
+    'alignment' => 'horizontal',
+    'fill_single_line' => 1,
+  ));
+  $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->override_option('path', 'about/board');
   $handler->override_option('menu', array(
     'type' => 'none',
@@ -315,20 +396,24 @@ function piropublic_about_views_default_views() {
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
-        'make_link' => 0,
-        'path' => '',
+        'make_link' => 1,
+        'path' => '#',
         'link_class' => '',
         'alt' => '',
         'prefix' => '',
         'suffix' => '',
+        'target' => '',
         'help' => '',
         'trim' => 0,
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'strip_tags' => 0,
         'html' => 0,
+        'strip_tags' => 0,
       ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
       'link_to_node' => 0,
       'exclude' => 0,
       'id' => 'title',
@@ -378,72 +463,100 @@ function piropublic_about_views_default_views() {
         'alt' => '',
         'prefix' => '',
         'suffix' => '',
+        'target' => '',
         'help' => '',
         'trim' => 0,
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'strip_tags' => 0,
         'html' => 0,
+        'strip_tags' => 0,
       ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
       'type' => 'separator',
       'separator' => ', ',
-      'empty' => '',
       'link_to_taxonomy' => 0,
-      'limit' => 0,
+      'limit' => 1,
       'vids' => array(
-        '2' => 0,
-        '4' => 0,
-        '48' => 0,
-        '44' => 0,
-        '5' => 0,
-        '6' => 0,
-        '7' => 0,
-        '8' => 0,
-        '9' => 0,
-        '10' => 0,
-        '11' => 0,
-        '45' => 0,
-        '12' => 0,
-        '49' => 0,
-        '13' => 0,
-        '14' => 0,
-        '15' => 0,
-        '47' => 0,
-        '16' => 0,
-        '17' => 0,
-        '18' => 0,
-        '19' => 0,
-        '20' => 0,
-        '21' => 0,
-        '22' => 0,
-        '23' => 0,
-        '24' => 0,
-        '25' => 0,
-        '26' => 0,
-        '27' => 0,
-        '28' => 0,
-        '29' => 0,
-        '30' => 0,
-        '31' => 0,
-        '32' => 0,
-        '33' => 0,
-        '34' => 0,
-        '35' => 0,
-        '46' => 0,
-        '43' => 0,
-        '36' => 0,
-        '37' => 0,
-        '38' => 0,
-        '39' => 0,
-        '40' => 0,
-        '41' => 0,
-        '42' => 0,
+        '4' => 4,
+        '3' => 0,
+        '1' => 0,
       ),
       'exclude' => 1,
       'id' => 'tid',
       'table' => 'term_node',
       'field' => 'tid',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'edit_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => 'edit',
+      'exclude' => 0,
+      'id' => 'edit_node',
+      'table' => 'node',
+      'field' => 'edit_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'delete_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => 'delete',
+      'exclude' => 0,
+      'id' => 'delete_node',
+      'table' => 'node',
+      'field' => 'delete_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
       'relationship' => 'none',
     ),
   ));
@@ -490,10 +603,10 @@ function piropublic_about_views_default_views() {
       'group' => '0',
       'exposed' => TRUE,
       'expose' => array(
-        'use_operator' => 0,
         'operator' => 'tid_op',
-        'identifier' => 'tid',
         'label' => '',
+        'use_operator' => 0,
+        'identifier' => 'tid',
         'optional' => 1,
         'single' => 1,
         'remember' => 0,
@@ -501,7 +614,7 @@ function piropublic_about_views_default_views() {
       ),
       'type' => 'select',
       'limit' => TRUE,
-      'vid' => '49',
+      'vid' => '4',
       'id' => 'tid',
       'table' => 'term_node',
       'field' => 'tid',
@@ -514,14 +627,18 @@ function piropublic_about_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('cache', array(
-    'type' => 'time',
-    'results_lifespan' => 3600,
-    'output_lifespan' => 3600,
+    'type' => 'none',
   ));
   $handler->override_option('title', 'Frequently Asked Questions');
-  $handler->override_option('header', 'If you cannot find an answer to your question in the FAQ, please use the help form to contact us. ');
   $handler->override_option('header_format', '2');
-  $handler->override_option('header_empty', 1);
+  $handler->override_option('header_empty', 0);
+  $handler->override_option('empty', '<?php  
+if (user_access(\'create faq content\')) {
+    drupal_set_message(t(\'A question has not yet been added to this category.\') . \' \' . l(t(\'Click here to add one.\'), \'node/add/faq\')); }
+else {
+drupal_set_message(t(\'There are no questions in this category. Be the first to <a href="/contact">suggest one</a>.\'));}
+?>');
+  $handler->override_option('empty_format', '4');
   $handler->override_option('items_per_page', 0);
   $handler->override_option('style_plugin', 'list');
   $handler->override_option('style_options', array(
@@ -560,30 +677,18 @@ function piropublic_about_views_default_views() {
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
-    'field_authoruser_uid' => array(
-      'label' => 'User Account',
-      'required' => 0,
-      'delta' => -1,
-      'id' => 'field_authoruser_uid',
-      'table' => 'node_data_field_authoruser',
-      'field' => 'field_authoruser_uid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'nodequeue_rel' => array(
+    'nodequeue_rel_queue_name' => array(
       'label' => 'queue',
-      'required' => 0,
+      'required' => 1,
       'limit' => 1,
-      'qids' => array(
-        '3' => 3,
-        '1' => 0,
-        '2' => 0,
+      'names' => array(
+        'staff' => 'staff',
+        'frontpage_banner_queue' => 0,
+        'board_of_directors' => 0,
       ),
-      'id' => 'nodequeue_rel',
+      'id' => 'nodequeue_rel_queue_name',
       'table' => 'node',
-      'field' => 'nodequeue_rel',
+      'field' => 'nodequeue_rel_queue_name',
       'override' => array(
         'button' => 'Override',
       ),
@@ -602,17 +707,21 @@ function piropublic_about_views_default_views() {
         'alt' => '',
         'prefix' => '',
         'suffix' => '',
+        'target' => '',
         'help' => '',
         'trim' => 0,
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'strip_tags' => 0,
         'html' => 0,
+        'strip_tags' => 0,
       ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'header_thumb_linked',
+      'format' => 'staff_header_image_linked',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -705,14 +814,18 @@ function piropublic_about_views_default_views() {
         'alt' => '',
         'prefix' => '',
         'suffix' => '',
+        'target' => '',
         'help' => '',
         'trim' => 0,
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'strip_tags' => 0,
         'html' => 0,
+        'strip_tags' => 1,
       ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
       'format' => 'plain',
@@ -760,6 +873,105 @@ function piropublic_about_views_default_views() {
       ),
       'relationship' => 'none',
     ),
+    'edit_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => 'edit',
+      'exclude' => 0,
+      'id' => 'edit_node',
+      'table' => 'node',
+      'field' => 'edit_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'delete_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => 'delete',
+      'exclude' => 0,
+      'id' => 'delete_node',
+      'table' => 'node',
+      'field' => 'delete_node',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'nodequeue_links' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => '',
+      'exclude' => 0,
+      'id' => 'nodequeue_links',
+      'table' => 'node',
+      'field' => 'nodequeue_links',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('sorts', array(
     'position' => array(
@@ -767,7 +979,7 @@ function piropublic_about_views_default_views() {
       'id' => 'position',
       'table' => 'nodequeue_nodes',
       'field' => 'position',
-      'relationship' => 'nodequeue_rel',
+      'relationship' => 'nodequeue_rel_queue_name',
       'override' => array(
         'button' => 'Override',
       ),
@@ -810,18 +1022,42 @@ function piropublic_about_views_default_views() {
       ),
       'relationship' => 'none',
     ),
+    'field_staff_type_value_many_to_one' => array(
+      'operator' => 'or',
+      'value' => array(
+        'staff' => 'staff',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'field_staff_type_value_many_to_one',
+      'table' => 'node_data_field_staff_type',
+      'field' => 'field_staff_type_value_many_to_one',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
   ));
   $handler->override_option('cache', array(
-    'type' => 'time',
-    'results_lifespan' => 3600,
-    'output_lifespan' => 3600,
+    'type' => 'none',
   ));
-  $handler->override_option('title', 'Campaign for Liberty Staff');
+  $handler->override_option('title', 'Staff');
+  $handler->override_option('empty', '<?php  
+if (user_access(\'create staff content\')) {
+    drupal_set_message(t(\'A staff member has not been added yet.\') . \' \' . l(t(\'Click here to add one.\'), \'node/add/staff\'));
+}
+?>');
+  $handler->override_option('empty_format', '4');
   $handler->override_option('items_per_page', 0);
-  $handler = $view->new_display('page', 'Campaign for Liberty Staff', 'page_1');
+  $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->override_option('path', 'about/staff');
   $handler->override_option('menu', array(
     'type' => 'none',

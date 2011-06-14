@@ -17,9 +17,7 @@ function piropublic_about_uuid_features_default_vocabularies() {
     'tags' => '0',
     'module' => 'features_faq_terms',
     'weight' => '0',
-    'nodes' => array(
-      'faq' => 'faq',
-    ),
+    'nodes' => array(),
   );
   return $vocabularies;
 }

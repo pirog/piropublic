@@ -4,10 +4,10 @@ if (Drupal.jsEnabled) {
 		$('.view-faq .views-field-body').hide();
 		$('.view-faq .views-field-title').toggle(
 			function(){
-				$(this).next().slideDown();
+				$(this).next().next().slideDown();
 			},
 			function(){
-				$(this).next().slideUp();			
+				$(this).next().next().slideUp();			
 		});
 		
 		$('#views-exposed-form-faq-page-1 select').change(function(){

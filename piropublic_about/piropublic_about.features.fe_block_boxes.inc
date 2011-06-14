@@ -16,11 +16,9 @@ function piropublic_about_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass;
   $fe_block_boxes->info = 'FAQ Question Block';
-  $fe_block_boxes->format = '1';
+  $fe_block_boxes->format = '2';
   $fe_block_boxes->machine_name = 'faq_question';
-  $fe_block_boxes->body = '<p class="rtecenter">
-	<span class="faqpop"><a href="/contact" class="red-btn-1">ASK IT</a></span></p>
-';
+  $fe_block_boxes->body = '<p class="rtecenter" style="text-align: center; margin-left:23px;"><a class="red-btn-1" href="/contact">ASK IT</a></p>';
 
   $export['faq_question'] = $fe_block_boxes;
 

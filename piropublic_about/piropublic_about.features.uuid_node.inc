@@ -19,16 +19,8 @@ function piropublic_about_uuid_features_default_content() {
     'translate' => '0',
     'revision_uid' => '1',
     'title' => 'What is the Campaign For Liberty\'s purpose?',
-    'body' => '<p>
-    	Our Mission Statement reads: &quot;To promote and defend the great American principles of individual liberty, constitutional government, sound money, free markets, and a non-interventionist foreign policy, by means of educational and political activity.&quot;<br />
-    	<br />
-    	For more information, please visit our <a href="http://www.campaignforliberty.com/about.php">About</a> page.</p>
-    ',
-    'teaser' => '<p>
-    	Our Mission Statement reads: &quot;To promote and defend the great American principles of individual liberty, constitutional government, sound money, free markets, and a non-interventionist foreign policy, by means of educational and political activity.&quot;<br />
-    	<br />
-    	For more information, please visit our <a href="http://www.campaignforliberty.com/about.php">About</a> page.</p>
-    ',
+    'body' => '<p>Our Mission Statement reads: &quot;To promote and defend the great American principles of individual liberty, constitutional government, sound money, free markets, and a non-interventionist foreign policy, by means of educational and political activity.&quot;<br /><br />For more information, please visit our <a href="http://www.campaignforliberty.com/about.php">About</a> page.</p>',
+    'teaser' => '<p>Our Mission Statement reads: &quot;To promote and defend the great American principles of individual liberty, constitutional government, sound money, free markets, and a non-interventionist foreign policy, by means of educational and political activity.&quot;<br /><br />For more information, please visit our <a href="http://www.campaignforliberty.com/about.php">About</a> page.</p>',
     'log' => '',
     'format' => '2',
     'name' => 'admin',
@@ -416,40 +408,23 @@ function piropublic_about_uuid_features_default_content() {
     'translate' => '0',
     'revision_uid' => '1',
     'title' => 'John Tate',
-    'body' => '<p>John is a long-time political operative who has spent the last 26 years working in the political, lobbying and non-profit world in the areas of high dollar fundraising, direct mail, political strategy, grassroots activism and non-profit management.&nbsp;<br />
-    <br />
-    He is the founder and President of JFT Consulting, Inc. a consulting firm that specializes in political strategy, fundraising and grassroots lobbying.&nbsp; John served as the National Political Director for The Ron Paul Presidential Campaign Committee and is currently President of the newly formed Campaign for Liberty.<br />
-    <br />
-    Prior to joining Campaign for Liberty, John served as the Vice President, Membership for the Leadership Institute.&nbsp; In this role he headed up a department of LI staff that contacted and visited supporters nationwide to show them and raise funds for special targeted LI programs. In his 4 years at LI this program raised nearly $4 million. He also taught at many of LIs schools.<br />
-    &nbsp;<br />
-    Before joining LI, John spent 14 years with the National Right to Work Committee, serving as Vice President from 1998 to 2004.&nbsp; As Vice President he oversaw all state and federal lobbying efforts, public relations, the affiliated state and federal PACs for Right to Work and a direct mail and telemarketing fundraising operation that raised more than $23 million to combat Big Labor&rsquo;s coercive power over workers.<br />
-    &nbsp;<br />
-    In 1996, John was the GOP nominee for Congress in Virginia&rsquo;s 2<sup>nd</sup> district.<br />
-    &nbsp;<br />
-    Prior to his work at National Right to Work, John was Executive Director of Right to Work organizations in California and Delaware, and was Legislative Director of the United States Defense Committee.<br />
-    &nbsp;<br />
-    John is a long-time political activist in Virginia and National politics.&nbsp;&nbsp;He was Chairman of the Rules committee at the 1994 Virginia Republican State Convention and has worked on numerous local, state and national campaigns in Virginia, North Carolina, Delaware, California, Colorado, New Hampshire and around the country.<br />
-    &nbsp;<br />
-    John began teaching political strategy in 1983 and has taught at many schools and seminars through the years. He is a sought-after speaker on winning political technology and grass-roots mobilization at the local, state and national level and is author of The Grassroots Activist Manual. &nbsp;<br />
-    <br />
-    John is a graduate of the University of Virginia with a B.A. in History.<br />
-    <br />
-    John and is wife, Kathy, live in Bristow, VA, where they home school and are raising their five children, Lauren, Joe, Jake, Jared and John Robert.<br />
-    &nbsp;</p>',
-    'teaser' => '<p>John is a long-time political operative who has spent the last 26 years working in the political, lobbying and non-profit world in the areas of high dollar fundraising, direct mail, political strategy, grassroots activism and non-profit management.&nbsp;<br />
-    <br />
-    He is the founder and President of JFT Consulting, Inc. a consulting firm that specializes in political strategy, fundraising and grassroots lobbying.&nbsp; John served as the National Political Director for The Ron Paul Presidential Campaign Committee and is currently President of the newly formed Campaign for Liberty.',
+    'body' => '<p>John is a long-time political operative who has spent the last 26 years working in the political, lobbying and non-profit world in the areas of high dollar fundraising, direct mail, political strategy, grassroots activism and non-profit management.&nbsp;<br /><br />He is the founder and President of JFT Consulting, Inc. a consulting firm that specializes in political strategy, fundraising and grassroots lobbying.&nbsp; John served as the National Political Director for The Ron Paul Presidential Campaign Committee and is currently President of the newly formed Campaign for Liberty.<br /><br />Prior to joining Campaign for Liberty, John served as the Vice President, Membership for the Leadership Institute.&nbsp; In this role he headed up a department of LI staff that contacted and visited supporters nationwide to show them and raise funds for special targeted LI programs. In his 4 years at LI this program raised nearly $4 million. He also taught at many of LIs schools.<br />&nbsp;<br />Before joining LI, John spent 14 years with the National Right to Work Committee, serving as Vice President from 1998 to 2004.&nbsp; As Vice President he oversaw all state and federal lobbying efforts, public relations, the affiliated state and federal PACs for Right to Work and a direct mail and telemarketing fundraising operation that raised more than $23 million to combat Big Labor&rsquo;s coercive power over workers.<br />&nbsp;<br />In 1996, John was the GOP nominee for Congress in Virginia&rsquo;s 2<sup>nd</sup> district.<br />&nbsp;<br />Prior to his work at National Right to Work, John was Executive Director of Right to Work organizations in California and Delaware, and was Legislative Director of the United States Defense Committee.<br />&nbsp;<br />John is a long-time political activist in Virginia and National politics.&nbsp;&nbsp;He was Chairman of the Rules committee at the 1994 Virginia Republican State Convention and has worked on numerous local, state and national campaigns in Virginia, North Carolina, Delaware, California, Colorado, New Hampshire and around the country.<br />&nbsp;<br />John began teaching political strategy in 1983 and has taught at many schools and seminars through the years. He is a sought-after speaker on winning political technology and grass-roots mobilization at the local, state and national level and is author of The Grassroots Activist Manual. &nbsp;<br /><br />John is a graduate of the University of Virginia with a B.A. in History.<br /><br />John and is wife, Kathy, live in Bristow, VA, where they home school and are raising their five children, Lauren, Joe, Jake, Jared and John Robert.<br />&nbsp;</p>',
+    'teaser' => '<p>John is a long-time political operative who has spent the last 26 years working in the political, lobbying and non-profit world in the areas of high dollar fundraising, direct mail, political strategy, grassroots activism and non-profit management.&nbsp;<br /><br />He is the founder and President of JFT Consulting, Inc. a consulting firm that specializes in political strategy, fundraising and grassroots lobbying.&nbsp; John served as the National Political Director for The Ron Paul Presidential Campaign Committee and is currently President of the newly formed Campaign for Liberty.',
     'log' => '',
     'format' => '2',
     'name' => '',
     'path' => 'about/staff/john-tate',
-    'field_authoruser' => array(),
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => 'board',
+      ),
+      '1' => array(
+        'value' => 'staff',
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
-        'value' => '<br />
-    <p>John is President of Campaign for Liberty<br />
-    &nbsp;</p>',
-        'format' => '2',
+        'value' => 'John is President of Campaign for Liberty.',
       ),
     ),
     'field_job_title' => array(
@@ -458,11 +433,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -494,12 +464,15 @@ function piropublic_about_uuid_features_default_content() {
     'format' => '2',
     'name' => '',
     'path' => 'about/staff/matt-holdridge',
-    'field_authoruser' => array(),
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Matt Holdridge is a long-time political activist who has worked with several local, state, national and college groups.&nbsp; He currently serves as Director of Marketing for Campaign for Liberty.&nbsp;<br />
     &nbsp;</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -508,11 +481,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -540,11 +508,14 @@ function piropublic_about_uuid_features_default_content() {
     'format' => '2',
     'name' => '',
     'path' => 'about/staff/matthew-hawes',
-    'field_authoruser' => array(),
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Matt Hawes is the Vice President of Programs for Campaign for Liberty.</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -553,11 +524,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -589,15 +555,18 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/deborah-wells',
-    'field_authoruser' => array(),
+    'path' => 'about/people/deborah-wells',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Deb was volunteer Missouri Field Coordinator for the Ron Paul 2008 campaign and assisted at<br />
     the Rally for the Republic.&nbsp; Her political experience includes walking door to door, phone<br />
     banking, and GOTV intiatives for state and local office and her neighborhood association<br />
     board.&nbsp;</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -606,11 +575,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -638,12 +602,15 @@ function piropublic_about_uuid_features_default_content() {
     'format' => '2',
     'name' => '',
     'path' => 'about/staff/adam-de-angeli',
-    'field_authoruser' => array(),
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<br />
     <p>Adam de Angeli served as Technology Coordinator for the Ron Paul grassroots in Michigan before being brought onto the official Campaign Committee as a technology consultant.&nbsp; After a brief stint as a Congressional campaign manager, de Angeli joined the Campaign For Liberty in July 2008.&nbsp; He lives in Ann Arbor, Michigan.</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -652,11 +619,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -692,12 +654,15 @@ function piropublic_about_uuid_features_default_content() {
     'format' => '2',
     'name' => '',
     'path' => 'about/staff/arick-stall',
-    'field_authoruser' => array(),
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<br />
     Arick is the Development Associate at Campaign for Liberty.',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -706,11 +671,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -756,12 +716,15 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/steve-bierfeldt',
-    'field_authoruser' => array(),
+    'path' => 'about/people/steve-bierfeldt',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Steve Bierfeldt is the Director of Development for Campaign for Liberty. He has been published on numerous websites including the Huffington Post, LewRockwell.com and Campaign for Liberty. He co-authored the book Who is the Real Barack Obama? and is the son of Jerry &amp; Janet Bierfeldt. Steve is a Born-Again Christian who was saved when he was 19.</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -770,11 +733,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -807,12 +765,15 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/teri-capshaw',
-    'field_authoruser' => array(),
+    'path' => 'about/people/teri-capshaw',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => 'Teri Capshaw is the Campaign for Liberty Donor Relations Officer. She works out of the Springfield, Virginia office. ',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -821,11 +782,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -852,12 +808,15 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/tim-shoemaker',
-    'field_authoruser' => array(),
+    'path' => 'about/people/tim-shoemaker',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Timothy Shoemaker is a Research &amp; Policy Analyst at Campaign for Liberty. In 2008, he graduated Magna Cum Laude with a Bachelor of Arts from Indiana University of Pennsylvania.</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -866,11 +825,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -895,12 +849,15 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/amanda-lee',
-    'field_authoruser' => array(),
+    'path' => 'about/people/amanda-lee',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Amanda is&nbsp;John Tate&#39;s primary assistant at Campaign for Liberty.</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -909,11 +866,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -940,12 +892,15 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/kevin-brett',
-    'field_authoruser' => array(),
+    'path' => 'about/people/kevin-brett',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => 'Kevin is the Production Manager at Campaign for Liberty.  He graduated from the University of Delaware with a BA in Mass Communication and a History minor. Originally from Philadelphia, he has an eclectic background in media production.  ',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -954,11 +909,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -989,12 +939,15 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/marian-ward',
-    'field_authoruser' => array(),
+    'path' => 'about/people/marian-ward',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Marian Ward is the Director of Donor Operations for Campaign for Liberty.</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -1003,11 +956,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -1032,12 +980,15 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/anthony-gregory',
-    'field_authoruser' => array(),
+    'path' => 'about/people/anthony-gregory',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Anthony is Editor-in-Chief for Campaign for Liberty and a consultant for the organization. He is also a researcher at the Independent Institute, a columnist at LewRockwell.com, a guest editor at Strike the Root, a blogger at Liberty and Power and a rock musician.</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -1046,11 +997,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
@@ -1077,12 +1023,15 @@ function piropublic_about_uuid_features_default_content() {
     'log' => '',
     'format' => '2',
     'name' => '',
-    'path' => 'about/staff/debbie-hopper',
-    'field_authoruser' => array(),
+    'path' => 'about/people/debbie-hopper',
+    'field_staff_type' => array(
+      '0' => array(
+        'value' => NULL,
+      ),
+    ),
     'field_brief_bio' => array(
       '0' => array(
         'value' => '<p>Debbie Hopper is Vice President of State Operations. She was also assistant Campaign Manager for the Ron Paul 2008 Presidential Campaign.</p>',
-        'format' => '2',
       ),
     ),
     'field_job_title' => array(
@@ -1091,11 +1040,6 @@ function piropublic_about_uuid_features_default_content() {
       ),
     ),
     'field_staff_photo' => array(),
-    'field_staff_option' => array(
-      '0' => array(
-        'value' => NULL,
-      ),
-    ),
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),

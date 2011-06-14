@@ -138,15 +138,13 @@ function piropublic_about_strongarm() {
   $strongarm->value = array(
     'title' => '-5',
     'body_field' => '0',
-    'revision_information' => '5',
-    'author' => '8',
-    'options' => '9',
-    'comment_settings' => '7',
-    'menu' => '4',
-    'path' => '6',
-    'mollom' => '12',
-    'path_redirect' => '10',
-    'xmlsitemap' => '11',
+    'revision_information' => '2',
+    'author' => '5',
+    'options' => '6',
+    'comment_settings' => '4',
+    'menu' => '1',
+    'path' => '3',
+    'path_redirect' => '7',
   );
 
   $export['content_extra_weights_staff'] = $strongarm;
@@ -244,7 +242,7 @@ function piropublic_about_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_staff_pattern';
-  $strongarm->value = 'about/staff/[title-raw]';
+  $strongarm->value = 'about/people/[title-raw]';
 
   $export['pathauto_node_staff_pattern'] = $strongarm;
   $strongarm = new stdClass;
