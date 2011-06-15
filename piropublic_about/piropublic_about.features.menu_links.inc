@@ -6,6 +6,24 @@
 function piropublic_about_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-footer:00fa401b-9658-11e0-88ba-e0e2cd5d67f0
+  $menu_links['menu-footer:00fa401b-9658-11e0-88ba-e0e2cd5d67f0'] = array(
+    'menu_name' => 'menu-footer',
+    'router_path' => 'node/%',
+    'link_title' => 'Help',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Help',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-48',
+    'uuid' => '00fa401b-9658-11e0-88ba-e0e2cd5d67f0',
+  );
   // Exported menu link: primary-links:about/board
   $menu_links['primary-links:about/board'] = array(
     'menu_name' => 'primary-links',
@@ -23,7 +41,7 @@ function piropublic_about_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '0',
-    'parent_path' => 'node/84',
+    'parent_path' => 'node/116',
     'parent_uuid' => 'fa2e7bb7-9446-11e0-88ba-e0e2cd5d67f0',
   );
   // Exported menu link: primary-links:about/faq
@@ -43,7 +61,7 @@ function piropublic_about_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-50',
-    'parent_path' => 'node/84',
+    'parent_path' => 'node/116',
     'parent_uuid' => 'fa2e7bb7-9446-11e0-88ba-e0e2cd5d67f0',
   );
   // Exported menu link: primary-links:about/staff
@@ -63,7 +81,7 @@ function piropublic_about_menu_default_menu_links() {
     'has_children' => '1',
     'expanded' => '0',
     'weight' => '-49',
-    'parent_path' => 'node/84',
+    'parent_path' => 'node/116',
     'parent_uuid' => 'fa2e7bb7-9446-11e0-88ba-e0e2cd5d67f0',
   );
   // Exported menu link: primary-links:fa2e7bb7-9446-11e0-88ba-e0e2cd5d67f0
@@ -89,6 +107,7 @@ function piropublic_about_menu_default_menu_links() {
   t('About');
   t('Directors');
   t('FAQ');
+  t('Help');
   t('Staff');
 
 
