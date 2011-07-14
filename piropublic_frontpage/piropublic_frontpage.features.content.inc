@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_content_default_fields().
  */
-function piropublic_content_default_fields() {
+function piropublic_frontpage_content_default_fields() {
   $fields = array();
 
   // Exported field: field_events
@@ -1073,6 +1073,11 @@ other|Other (Embed Code)',
       'providers' => array(
         'youtube' => 'youtube',
         'foxnews' => 0,
+        'google' => 0,
+        'lastfm' => 0,
+        'myspace' => 0,
+        'ustreamlive' => 0,
+        'zzz_custom_url' => 0,
       ),
       'emthumb' => 0,
       'emthumb_label' => 'YouTube custom thumbnail',

@@ -8,87 +8,10 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'c_fields_anim_speed_frontpage_banner';
-  $strongarm->value = 'slow';
-
-  $export['c_fields_anim_speed_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'c_fields_animation_frontpage_banner';
-  $strongarm->value = '2';
-
-  $export['c_fields_animation_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'c_fields_edit_frontpage_banner';
-  $strongarm->value = '1';
-
-  $export['c_fields_edit_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'c_fields_js_frontpage_banner';
-  $strongarm->value = '1';
-
-  $export['c_fields_js_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'c_fields_reset_default_frontpage_banner';
-  $strongarm->value = 1;
-
-  $export['c_fields_reset_default_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'c_fields_show_all_frontpage_banner';
-  $strongarm->value = 0;
-
-  $export['c_fields_show_all_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'c_fields_view_frontpage_banner';
-  $strongarm->value = '1';
-
-  $export['c_fields_view_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_featured_blocks';
-  $strongarm->value = 0;
-
-  $export['comment_anonymous_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_frontpage_banner';
-  $strongarm->value = '0';
-
-  $export['comment_anonymous_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_page';
   $strongarm->value = '0';
 
   $export['comment_anonymous_page'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_featured_blocks';
-  $strongarm->value = '3';
-
-  $export['comment_controls_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_controls_frontpage_banner';
-  $strongarm->value = '3';
-
-  $export['comment_controls_frontpage_banner'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -99,38 +22,10 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_featured_blocks';
-  $strongarm->value = '4';
-
-  $export['comment_default_mode_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_frontpage_banner';
-  $strongarm->value = '4';
-
-  $export['comment_default_mode_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_page';
   $strongarm->value = '4';
 
   $export['comment_default_mode_page'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_featured_blocks';
-  $strongarm->value = '1';
-
-  $export['comment_default_order_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_order_frontpage_banner';
-  $strongarm->value = '1';
-
-  $export['comment_default_order_frontpage_banner'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -141,45 +36,10 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_featured_blocks';
-  $strongarm->value = '50';
-
-  $export['comment_default_per_page_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_frontpage_banner';
-  $strongarm->value = '50';
-
-  $export['comment_default_per_page_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_page';
   $strongarm->value = '50';
 
   $export['comment_default_per_page_page'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_featured_blocks';
-  $strongarm->value = '0';
-
-  $export['comment_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_featured_blocks';
-  $strongarm->value = '1';
-
-  $export['comment_form_location_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_frontpage_banner';
-  $strongarm->value = '0';
-
-  $export['comment_form_location_frontpage_banner'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -190,13 +50,6 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_frontpage_banner';
-  $strongarm->value = '0';
-
-  $export['comment_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_page';
   $strongarm->value = '0';
 
@@ -204,38 +57,10 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_featured_blocks';
-  $strongarm->value = '0';
-
-  $export['comment_preview_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_frontpage_banner';
-  $strongarm->value = '1';
-
-  $export['comment_preview_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_page';
   $strongarm->value = '1';
 
   $export['comment_preview_page'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_featured_blocks';
-  $strongarm->value = '0';
-
-  $export['comment_subject_field_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_frontpage_banner';
-  $strongarm->value = '1';
-
-  $export['comment_subject_field_frontpage_banner'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -247,7 +72,7 @@ function piropublic_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'contact_default_status';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
 
   $export['contact_default_status'] = $strongarm;
   $strongarm = new stdClass;
@@ -264,39 +89,6 @@ function piropublic_strongarm() {
   $strongarm->value = '3';
 
   $export['contact_hourly_threshold'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_extra_weights_featured_blocks';
-  $strongarm->value = array(
-    'title' => '-5',
-    'revision_information' => '2',
-    'author' => '1',
-    'options' => '3',
-    'comment_settings' => '6',
-    'menu' => '0',
-    'path' => '5',
-    'path_redirect' => '7',
-    'xmlsitemap' => '4',
-  );
-
-  $export['content_extra_weights_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'content_extra_weights_frontpage_banner';
-  $strongarm->value = array(
-    'title' => '-3',
-    'revision_information' => '4',
-    'author' => '7',
-    'options' => '8',
-    'comment_settings' => '5',
-    'menu' => '3',
-    'path' => '6',
-    'path_redirect' => '9',
-  );
-
-  $export['content_extra_weights_frontpage_banner'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -462,16 +254,9 @@ function piropublic_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'filter_default_format';
-  $strongarm->value = '1';
+  $strongarm->value = '5';
 
   $export['filter_default_format'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'filter_html_1';
-  $strongarm->value = 1;
-
-  $export['filter_html_1'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -744,14 +529,14 @@ function piropublic_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'logintoboggan_redirect_on_confirm';
-  $strongarm->value = 'user';
+  $strongarm->value = 'profile';
 
   $export['logintoboggan_redirect_on_confirm'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'logintoboggan_redirect_on_register';
-  $strongarm->value = 'user';
+  $strongarm->value = 'profile';
 
   $export['logintoboggan_redirect_on_register'] = $strongarm;
   $strongarm = new stdClass;
@@ -932,25 +717,6 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_featured_blocks';
-  $strongarm->value = array(
-    0 => 'status',
-  );
-
-  $export['node_options_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_frontpage_banner';
-  $strongarm->value = array(
-    0 => 'status',
-    1 => 'promote',
-  );
-
-  $export['node_options_frontpage_banner'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
     0 => 'status',
@@ -988,20 +754,6 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_featured_blocks_pattern';
-  $strongarm->value = 'featuredblock/[title-raw]';
-
-  $export['pathauto_node_featured_blocks_pattern'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_frontpage_banner_pattern';
-  $strongarm->value = 'frontpagebanner/[yyyy]/[mm]/[dd]/[title-raw]';
-
-  $export['pathauto_node_frontpage_banner_pattern'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_page_pattern';
   $strongarm->value = '[title-raw]';
 
@@ -1016,31 +768,10 @@ function piropublic_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_update_action';
-  $strongarm->value = '2';
-
-  $export['pathauto_update_action'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'site_403';
-  $strongarm->value = 'toboggan/denied';
-
-  $export['site_403'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'site_404';
   $strongarm->value = 'search404';
 
   $export['site_404'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'node';
-
-  $export['site_frontpage'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -1075,20 +806,40 @@ function piropublic_strongarm() {
     'toggle_name' => 0,
     'toggle_slogan' => 1,
     'toggle_mission' => 1,
-    'toggle_node_user_picture' => 1,
-    'toggle_comment_user_picture' => 1,
+    'toggle_node_user_picture' => 0,
+    'toggle_comment_user_picture' => 0,
     'toggle_search' => 1,
     'toggle_favicon' => 1,
     'toggle_primary_links' => 1,
     'toggle_secondary_links' => 1,
+    'toggle_node_info_country' => 0,
+    'toggle_node_info_county' => 0,
+    'toggle_node_info_donation' => 0,
     'toggle_node_info_faq' => 0,
+    'toggle_node_info_feed_fast' => 0,
     'toggle_node_info_featured_blocks' => 0,
-    'toggle_node_info_forum' => 1,
+    'toggle_node_info_feed' => 0,
+    'toggle_node_info_feed_item' => 0,
+    'toggle_node_info_forum' => 0,
     'toggle_node_info_frontpage_banner' => 0,
-    'toggle_node_info_image' => 1,
+    'toggle_node_info_image' => 0,
+    'toggle_node_info_op_image' => 0,
+    'toggle_node_info_memblog' => 0,
     'toggle_node_info_page' => 0,
+    'toggle_node_info_personal' => 0,
+    'toggle_node_info_poll' => 0,
+    'toggle_node_info_product' => 0,
+    'toggle_node_info_profile' => 0,
+    'toggle_node_info_profpic' => 0,
+    'toggle_node_info_region' => 0,
+    'toggle_node_info_settings' => 0,
     'toggle_node_info_staff' => 0,
+    'toggle_node_info_state' => 0,
+    'toggle_node_info_video' => 0,
+    'toggle_node_info_feed_video' => 0,
     'toggle_node_info_webform' => 0,
+    'toggle_node_info_webform_report' => 0,
+    'toggle_node_info_event' => 0,
     'default_logo' => 1,
     'logo_path' => 'sites/default/files/logo.jpg',
     'logo_upload' => '',
@@ -1098,20 +849,6 @@ function piropublic_strongarm() {
   );
 
   $export['theme_settings'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'upload_featured_blocks';
-  $strongarm->value = '0';
-
-  $export['upload_featured_blocks'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'upload_frontpage_banner';
-  $strongarm->value = '0';
-
-  $export['upload_frontpage_banner'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -1131,17 +868,89 @@ function piropublic_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'vertical_tabs_forms';
   $strongarm->value = array(
-    'frontpage_banner_node_form' => array(
+    'memblog_node_form' => array(
       'menu' => 'menu',
-      'notifications' => 'notifications',
+      'revision_information' => 'revision_information',
+      'author' => 'author',
+      'options' => 'options',
+      'path' => 'path',
+      'comment_settings' => 'comment_settings',
+      'notifications' => 0,
+    ),
+    'region_node_form' => array(
+      'menu' => 'menu',
       'revision_information' => 'revision_information',
       'author' => 'author',
       'options' => 'options',
       'comment_settings' => 'comment_settings',
-      'xmlsitemap' => 'xmlsitemap',
       'path' => 'path',
+      'notifications' => 0,
+      'themes' => 0,
+    ),
+    'county_node_form' => array(
+      'menu' => 'menu',
+      'revision_information' => 'revision_information',
+      'author' => 'author',
+      'options' => 'options',
+      'comment_settings' => 'comment_settings',
+      'path' => 'path',
+      'notifications' => 0,
+      'themes' => 0,
+    ),
+    'country_node_form' => array(
+      'menu' => 'menu',
+      'author' => 'author',
+      'revision_information' => 'revision_information',
+      'options' => 'options',
+      'path' => 'path',
+      'comment_settings' => 'comment_settings',
+      'notifications' => 0,
+      'themes' => 0,
+    ),
+    'state_node_form' => array(
+      'menu' => 'menu',
+      'revision_information' => 'revision_information',
+      'author' => 'author',
+      'options' => 'options',
+      'comment_settings' => 'comment_settings',
+      'path' => 'path',
+      'notifications' => 0,
+      'themes' => 0,
+    ),
+    'frontpage_banner_node_form' => array(
+      'menu' => 'menu',
+      'author' => 'author',
+      'revision_information' => 'revision_information',
+      'options' => 'options',
+      'path' => 'path',
+      'xmlsitemap' => 'xmlsitemap',
+      'attachments' => 'attachments',
+      'comment_settings' => 'comment_settings',
       'group_frontpage_banner_vidgrp' => 0,
       'group_frontpage_banner_lnkgrp' => 0,
+    ),
+    'donation_node_form' => array(
+      'menu' => 'menu',
+      'revision_information' => 'revision_information',
+      'author' => 'author',
+      'options' => 'options',
+      'comment_settings' => 'comment_settings',
+      'path' => 'path',
+      'attachments' => 'attachments',
+      'xmlsitemap' => 'xmlsitemap',
+      'base' => 0,
+      'shipping' => 0,
+    ),
+    'featured_blocks_node_form' => array(
+      'menu' => 'menu',
+      'author' => 'author',
+      'revision_information' => 'revision_information',
+      'options' => 'options',
+      'xmlsitemap' => 'xmlsitemap',
+      'comment_settings' => 'comment_settings',
+      'path' => 'path',
+      'attachments' => 'attachments',
+      'group_promote' => 0,
     ),
   );
 
