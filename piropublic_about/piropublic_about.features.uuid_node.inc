@@ -9,6 +9,7 @@ function piropublic_about_uuid_features_default_content() {
   $nodes[] = array(
     'type' => 'page',
     'language' => '',
+    'uid' => '0',
     'status' => '1',
     'comment' => '0',
     'promote' => '0',
@@ -22,6 +23,7 @@ function piropublic_about_uuid_features_default_content() {
     'teaser' => '',
     'log' => '',
     'format' => '1',
+    'name' => '',
     'path' => 'help',
     'og_groups_both' => array(),
     'og_groups' => array(),
@@ -37,6 +39,7 @@ function piropublic_about_uuid_features_default_content() {
   $nodes[] = array(
     'type' => 'page',
     'language' => '',
+    'uid' => '0',
     'status' => '1',
     'comment' => '0',
     'promote' => '0',
@@ -50,6 +53,7 @@ function piropublic_about_uuid_features_default_content() {
     'teaser' => '<h2>Statement of Principles</h2><p><br />Americans inherit from our ancestors a glorious tradition of freedom and resistance to oppression.&nbsp; Our country has long been admired by the rest of the world for her great example of liberty and prosperity&mdash;a light shining in the darkness of tyranny.<br />',
     'log' => '',
     'format' => '2',
+    'name' => '',
     'path' => 'about',
     'og_groups_both' => array(),
     'og_groups' => array(),
