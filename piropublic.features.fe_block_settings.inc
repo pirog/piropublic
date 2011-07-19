@@ -6,12 +6,12 @@
 function piropublic_default_fe_block_settings() {
   $export = array();
 
-  // admin_theme
+  // twostate
   $theme = array();
 
   $theme['block-footer_copyright'] = array(
     'module' => 'block',
-    'theme' => 'admin_theme',
+    'theme' => 'twostate',
     'status' => 0,
     'weight' => '0',
     'region' => '',
@@ -19,7 +19,7 @@ function piropublic_default_fe_block_settings() {
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
-    'title' => '<none>',
+    'title' => '',
     'cache' => '-1',
     'machine_name' => 'footer_copyright',
   );
@@ -27,7 +27,7 @@ function piropublic_default_fe_block_settings() {
   $theme['menu-menu-authheader'] = array(
     'module' => 'menu',
     'delta' => 'menu-authheader',
-    'theme' => 'admin_theme',
+    'theme' => 'twostate',
     'status' => 0,
     'weight' => '0',
     'region' => '',
@@ -35,14 +35,14 @@ function piropublic_default_fe_block_settings() {
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
-    'title' => '<none>',
+    'title' => '',
     'cache' => '-1',
   );
 
   $theme['menu-menu-footer'] = array(
     'module' => 'menu',
     'delta' => 'menu-footer',
-    'theme' => 'admin_theme',
+    'theme' => 'twostate',
     'status' => 0,
     'weight' => '0',
     'region' => '',
@@ -57,7 +57,7 @@ function piropublic_default_fe_block_settings() {
   $theme['menu-menu-header'] = array(
     'module' => 'menu',
     'delta' => 'menu-header',
-    'theme' => 'admin_theme',
+    'theme' => 'twostate',
     'status' => 0,
     'weight' => '0',
     'region' => '',
@@ -65,36 +65,16 @@ function piropublic_default_fe_block_settings() {
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
-    'title' => '<none>',
+    'title' => '',
     'cache' => '-1',
   );
 
-  $export['admin_theme'] = $theme;
-
-  // liberty
-  $theme = array();
-
-  $theme['block-footer_copyright'] = array(
-    'module' => 'block',
-    'theme' => 'liberty',
-    'status' => 0,
-    'weight' => '-13',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => '-1',
-    'machine_name' => 'footer_copyright',
-  );
-
-  $theme['menu-menu-authheader'] = array(
+  $theme['menu-menu-header-top-menu'] = array(
     'module' => 'menu',
-    'delta' => 'menu-authheader',
-    'theme' => 'liberty',
+    'delta' => 'menu-header-top-menu',
+    'theme' => 'twostate',
     'status' => 0,
-    'weight' => '-15',
+    'weight' => '-11',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
@@ -104,37 +84,7 @@ function piropublic_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['menu-menu-footer'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer',
-    'theme' => 'liberty',
-    'status' => 0,
-    'weight' => '17',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => '-1',
-  );
-
-  $theme['menu-menu-header'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-header',
-    'theme' => 'liberty',
-    'status' => 0,
-    'weight' => '-19',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => '-1',
-  );
-
-  $export['liberty'] = $theme;
+  $export['twostate'] = $theme;
 
   $theme_default = variable_get('theme_default', 'garland');
   $themes = list_themes();

@@ -24,6 +24,12 @@ function piropublic_menu_default_menu_custom() {
     'title' => 'Anon Header',
     'description' => 'This menu contains the header links for anonymous users',
   );
+  // Exported menu: menu-header-top-menu
+  $menus['menu-header-top-menu'] = array(
+    'menu_name' => 'menu-header-top-menu',
+    'title' => 'Header Menu',
+    'description' => 'Links to place somewhere in the header',
+  );
   // Exported menu: primary-links
   $menus['primary-links'] = array(
     'menu_name' => 'primary-links',
@@ -35,6 +41,8 @@ function piropublic_menu_default_menu_custom() {
   t('Anon Header');
   t('Auth Header');
   t('Footer Menu');
+  t('Header Menu');
+  t('Links to place somewhere in the header');
   t('Primary links');
   t('Primary links are often used at the theme layer to show the major sections of a site. A typical representation for primary links would be tabs along the top.');
   t('This menu contains the header links for anonymous users');

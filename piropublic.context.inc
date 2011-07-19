@@ -27,9 +27,9 @@ function piropublic_context_default_contexts() {
           'region' => 'footer_bottom',
           'weight' => 0,
         ),
-        'block-2' => array(
+        'block-9' => array(
           'module' => 'block',
-          'delta' => 2,
+          'delta' => 9,
           'region' => 'footer_bottom',
           'weight' => 1,
         ),
@@ -44,6 +44,39 @@ function piropublic_context_default_contexts() {
   t('piropublic core');
 
   $export['footer_bottom'] = $context;
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'header_top';
+  $context->description = 'Header top context';
+  $context->tag = 'piropublic core';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-header-top-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-header-top-menu',
+          'region' => 'header_top',
+          'weight' => 0,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Header top context');
+  t('piropublic core');
+
+  $export['header_top'] = $context;
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;

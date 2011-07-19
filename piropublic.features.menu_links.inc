@@ -43,24 +43,6 @@ function piropublic_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
-  // Exported menu link: menu-footer:9b0988d8-87f4-11e0-b28c-9f89cf71cba4
-  $menu_links['menu-footer:9b0988d8-87f4-11e0-b28c-9f89cf71cba4'] = array(
-    'menu_name' => 'menu-footer',
-    'router_path' => 'node/%',
-    'link_title' => 'Terms of Use',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-50',
-    'uuid' => '9b0988d8-87f4-11e0-b28c-9f89cf71cba4',
-  );
   // Exported menu link: menu-footer:contact
   $menu_links['menu-footer:contact'] = array(
     'menu_name' => 'menu-footer',
@@ -79,11 +61,12 @@ function piropublic_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
-  // Exported menu link: menu-footer:f4cd1ce6-87f7-11e0-b28c-9f89cf71cba4
-  $menu_links['menu-footer:f4cd1ce6-87f7-11e0-b28c-9f89cf71cba4'] = array(
-    'menu_name' => 'menu-footer',
-    'router_path' => 'node/%',
-    'link_title' => 'Privacy Policy',
+  // Exported menu link: menu-header-top-menu:contact
+  $menu_links['menu-header-top-menu:contact'] = array(
+    'menu_name' => 'menu-header-top-menu',
+    'link_path' => 'contact',
+    'router_path' => 'contact',
+    'link_title' => 'Contact Us',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -94,8 +77,7 @@ function piropublic_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
-    'uuid' => 'f4cd1ce6-87f7-11e0-b28c-9f89cf71cba4',
+    'weight' => '0',
   );
   // Exported menu link: menu-header:contact
   $menu_links['menu-header:contact'] = array(
@@ -155,11 +137,10 @@ function piropublic_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Contact');
+  t('Contact Us');
   t('Home');
   t('Login');
   t('Logout');
-  t('Privacy Policy');
-  t('Terms of Use');
 
 
   return $menu_links;
