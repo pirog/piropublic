@@ -148,6 +148,79 @@ function piropublic_about_node_info() {
 function piropublic_about_rules_defaults() {
   return array(
     'rules' => array(
+      'rules_redirect_faq_create_to_faq_page' => array(
+        '#type' => 'rule',
+        '#set' => 'event_node_presave',
+        '#label' => 'Redirect FAQ create to FAQ page',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'piropublic_about',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#info' => array(
+              'label' => 'Saved content is FAQ',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'module' => 'Node',
+            ),
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'faq' => 'faq',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
+            '#weight' => 0,
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#type' => 'action',
+            '#settings' => array(
+              'path' => 'about/faq',
+              'query' => '',
+              'fragment' => '',
+              'force' => 0,
+              'immediate' => 0,
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'path' => array(
+                    '0' => ':global',
+                  ),
+                  'query' => array(
+                    '0' => ':global',
+                  ),
+                  'fragment' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+            '#name' => 'rules_action_drupal_goto',
+            '#info' => array(
+              'label' => 'Page redirect',
+              'module' => 'System',
+              'eval input' => array(
+                '0' => 'path',
+                '1' => 'query',
+                '2' => 'fragment',
+              ),
+            ),
+          ),
+        ),
+        '#version' => 6003,
+      ),
       'rules_add_board_to_board_list_on_update' => array(
         '#type' => 'rule',
         '#set' => 'event_node_update',
@@ -160,17 +233,6 @@ function piropublic_about_rules_defaults() {
         '#status' => 'default',
         '#conditions' => array(
           '0' => array(
-            '#weight' => 0,
-            '#type' => 'condition',
-            '#settings' => array(
-              'type' => array(
-                'staff' => 'staff',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#name' => 'rules_condition_content_is_type',
             '#info' => array(
               'label' => 'Updated content is Staff/Board',
               'arguments' => array(
@@ -181,24 +243,20 @@ function piropublic_about_rules_defaults() {
               ),
               'module' => 'Node',
             ),
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'staff' => 'staff',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
+            '#weight' => 0,
           ),
           '1' => array(
-            '#weight' => 0,
-            '#info' => array(
-              'label' => 'Updated content\'s field \'field_staff_board\' has value',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'eval input' => array(
-                '0' => 'code',
-                '1' => 'value|0|value',
-              ),
-              'module' => 'CCK',
-            ),
-            '#name' => 'content_rules_field_has_value',
+            '#type' => 'condition',
             '#settings' => array(
               'field_name' => 'field_staff_board',
               '#argument map' => array(
@@ -222,21 +280,27 @@ function piropublic_about_rules_defaults() {
                 ),
               ),
             ),
-            '#type' => 'condition',
+            '#name' => 'content_rules_field_has_value',
+            '#info' => array(
+              'label' => 'Updated content\'s field \'field_staff_board\' has value',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'eval input' => array(
+                '0' => 'code',
+                '1' => 'value|0|value',
+              ),
+              'module' => 'CCK',
+            ),
+            '#weight' => 0,
           ),
         ),
         '#actions' => array(
           '0' => array(
-            '#type' => 'action',
-            '#settings' => array(
-              'qids' => array(
-                '2' => '2',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#name' => 'rules_core_nodequeue_add_action',
+            '#weight' => 0,
             '#info' => array(
               'module' => 'Node',
               'arguments' => array(
@@ -250,7 +314,16 @@ function piropublic_about_rules_defaults() {
               'action_name' => 'nodequeue_add_action',
               'configurable' => TRUE,
             ),
-            '#weight' => 0,
+            '#name' => 'rules_core_nodequeue_add_action',
+            '#settings' => array(
+              'qids' => array(
+                '1' => '1',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'action',
           ),
         ),
         '#version' => 6003,
@@ -267,17 +340,6 @@ function piropublic_about_rules_defaults() {
         '#status' => 'default',
         '#conditions' => array(
           '0' => array(
-            '#weight' => 0,
-            '#type' => 'condition',
-            '#settings' => array(
-              'type' => array(
-                'staff' => 'staff',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#name' => 'rules_condition_content_is_type',
             '#info' => array(
               'label' => 'Updated content is Staff/Board',
               'arguments' => array(
@@ -288,9 +350,35 @@ function piropublic_about_rules_defaults() {
               ),
               'module' => 'Node',
             ),
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'staff' => 'staff',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
+            '#weight' => 0,
           ),
           '1' => array(
-            '#type' => 'condition',
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Updated content\'s field \'field_staff_staff\' has value',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'eval input' => array(
+                '0' => 'code',
+                '1' => 'value|0|value',
+              ),
+              'module' => 'CCK',
+            ),
+            '#name' => 'content_rules_field_has_value',
             '#settings' => array(
               'field_name' => 'field_staff_staff',
               '#argument map' => array(
@@ -314,133 +402,12 @@ function piropublic_about_rules_defaults() {
                 ),
               ),
             ),
-            '#name' => 'content_rules_field_has_value',
-            '#info' => array(
-              'label' => 'Updated content\'s field \'field_staff_staff\' has value',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'eval input' => array(
-                '0' => 'code',
-                '1' => 'value|0|value',
-              ),
-              'module' => 'CCK',
-            ),
-            '#weight' => 0,
-          ),
-        ),
-        '#actions' => array(
-          '0' => array(
-            '#weight' => 0,
-            '#type' => 'action',
-            '#settings' => array(
-              'qids' => array(
-                '3' => '3',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#name' => 'rules_core_nodequeue_add_action',
-            '#info' => array(
-              'module' => 'Node',
-              'arguments' => array(
-                'node' => array(
-                  'label' => 'Content',
-                  'type' => 'node',
-                ),
-              ),
-              'label' => 'Add to Nodequeues',
-              'base' => 'rules_core_action_execute',
-              'action_name' => 'nodequeue_add_action',
-              'configurable' => TRUE,
-            ),
-          ),
-        ),
-        '#version' => 6003,
-      ),
-      'rules_place_new_directors_into_director_queue' => array(
-        '#type' => 'rule',
-        '#set' => 'event_node_insert',
-        '#label' => 'Place new directors into director queue',
-        '#active' => 1,
-        '#weight' => '0',
-        '#categories' => array(
-          '0' => 'piropublic_about',
-        ),
-        '#status' => 'default',
-        '#conditions' => array(
-          '0' => array(
-            '#type' => 'condition',
-            '#settings' => array(
-              'type' => array(
-                'staff' => 'staff',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#name' => 'rules_condition_content_is_type',
-            '#info' => array(
-              'label' => 'Created content is Staff/Board',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'module' => 'Node',
-            ),
-            '#weight' => 0,
-          ),
-          '2' => array(
-            '#weight' => 0,
-            '#info' => array(
-              'label' => 'Created content\'s field \'field_staff_board\' has value',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'eval input' => array(
-                '0' => 'code',
-                '1' => 'value|0|value',
-              ),
-              'module' => 'CCK',
-            ),
-            '#name' => 'content_rules_field_has_value',
-            '#settings' => array(
-              'field_name' => 'field_staff_board',
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-              'value' => array(
-                '0' => array(
-                  'value' => 'board',
-                ),
-              ),
-              'code' => '',
-              'vars' => array(),
-              '#eval input' => array(
-                'token_rules_input_evaluator' => array(
-                  'code' => array(
-                    '0' => ':global',
-                  ),
-                  'value|0|value' => array(
-                    '0' => ':global',
-                  ),
-                ),
-              ),
-            ),
             '#type' => 'condition',
           ),
         ),
         '#actions' => array(
           '0' => array(
+            '#weight' => 0,
             '#info' => array(
               'module' => 'Node',
               'arguments' => array(
@@ -464,7 +431,113 @@ function piropublic_about_rules_defaults() {
               ),
             ),
             '#type' => 'action',
+          ),
+        ),
+        '#version' => 6003,
+      ),
+      'rules_place_new_directors_into_director_queue' => array(
+        '#type' => 'rule',
+        '#set' => 'event_node_insert',
+        '#label' => 'Place new directors into director queue',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'piropublic_about',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
             '#weight' => 0,
+            '#info' => array(
+              'label' => 'Created content is Staff/Board',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'module' => 'Node',
+            ),
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'staff' => 'staff',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
+          ),
+          '2' => array(
+            '#type' => 'condition',
+            '#settings' => array(
+              'field_name' => 'field_staff_board',
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+              'value' => array(
+                '0' => array(
+                  'value' => 'board',
+                ),
+              ),
+              'code' => '',
+              'vars' => array(),
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'code' => array(
+                    '0' => ':global',
+                  ),
+                  'value|0|value' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+            '#name' => 'content_rules_field_has_value',
+            '#info' => array(
+              'label' => 'Created content\'s field \'field_staff_board\' has value',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'eval input' => array(
+                '0' => 'code',
+                '1' => 'value|0|value',
+              ),
+              'module' => 'CCK',
+            ),
+            '#weight' => 0,
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#type' => 'action',
+            '#settings' => array(
+              'qids' => array(
+                '1' => '1',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#name' => 'rules_core_nodequeue_add_action',
+            '#info' => array(
+              'module' => 'Node',
+              'arguments' => array(
+                'node' => array(
+                  'label' => 'Content',
+                  'type' => 'node',
+                ),
+              ),
+              'label' => 'Add to Nodequeues',
+              'base' => 'rules_core_action_execute',
+              'action_name' => 'nodequeue_add_action',
+              'configurable' => TRUE,
+            ),
           ),
         ),
         '#version' => 6003,
@@ -481,16 +554,7 @@ function piropublic_about_rules_defaults() {
         '#status' => 'default',
         '#conditions' => array(
           '0' => array(
-            '#type' => 'condition',
-            '#settings' => array(
-              'type' => array(
-                'staff' => 'staff',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#name' => 'rules_condition_content_is_type',
+            '#weight' => 0,
             '#info' => array(
               'label' => 'Created content is Staff/Board',
               'arguments' => array(
@@ -501,25 +565,19 @@ function piropublic_about_rules_defaults() {
               ),
               'module' => 'Node',
             ),
-            '#weight' => 0,
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'staff' => 'staff',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
           ),
           '2' => array(
-            '#weight' => 0,
-            '#info' => array(
-              'label' => 'Created content\'s field \'field_staff_staff\' has value',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'eval input' => array(
-                '0' => 'code',
-                '1' => 'value|0|value',
-              ),
-              'module' => 'CCK',
-            ),
-            '#name' => 'content_rules_field_has_value',
+            '#type' => 'condition',
             '#settings' => array(
               'field_name' => 'field_staff_staff',
               '#argument map' => array(
@@ -543,11 +601,37 @@ function piropublic_about_rules_defaults() {
                 ),
               ),
             ),
-            '#type' => 'condition',
+            '#name' => 'content_rules_field_has_value',
+            '#info' => array(
+              'label' => 'Created content\'s field \'field_staff_staff\' has value',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'eval input' => array(
+                '0' => 'code',
+                '1' => 'value|0|value',
+              ),
+              'module' => 'CCK',
+            ),
+            '#weight' => 0,
           ),
         ),
         '#actions' => array(
           '0' => array(
+            '#weight' => 0,
+            '#type' => 'action',
+            '#settings' => array(
+              'qids' => array(
+                '2' => '2',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#name' => 'rules_core_nodequeue_add_action',
             '#info' => array(
               'module' => 'Node',
               'arguments' => array(
@@ -561,17 +645,222 @@ function piropublic_about_rules_defaults() {
               'action_name' => 'nodequeue_add_action',
               'configurable' => TRUE,
             ),
-            '#name' => 'rules_core_nodequeue_add_action',
+          ),
+        ),
+        '#version' => 6003,
+      ),
+      'rules_remove_board_from_board_list_on_update' => array(
+        '#type' => 'rule',
+        '#set' => 'event_node_update',
+        '#label' => 'Remove board from board list on update',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'piropublic_about',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#type' => 'condition',
             '#settings' => array(
-              'qids' => array(
-                '3' => '3',
+              'type' => array(
+                'staff' => 'staff',
               ),
               '#argument map' => array(
                 'node' => 'node',
               ),
             ),
-            '#type' => 'action',
+            '#name' => 'rules_condition_content_is_type',
+            '#info' => array(
+              'label' => 'Updated content is Staff/Board',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'module' => 'Node',
+            ),
             '#weight' => 0,
+          ),
+          '1' => array(
+            '#type' => 'condition',
+            '#settings' => array(
+              'field_name' => 'field_staff_board',
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+              'value' => array(
+                '0' => array(
+                  'value' => 'board',
+                ),
+              ),
+              'code' => '',
+              'vars' => array(),
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'code' => array(
+                    '0' => ':global',
+                  ),
+                  'value|0|value' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+            '#name' => 'content_rules_field_has_value',
+            '#info' => array(
+              'label' => 'Updated content\'s field \'field_staff_board\' has value',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'eval input' => array(
+                '0' => 'code',
+                '1' => 'value|0|value',
+              ),
+              'module' => 'CCK',
+            ),
+            '#negate' => 1,
+            '#weight' => 0,
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#type' => 'action',
+            '#settings' => array(
+              'qids' => array(
+                '1' => '1',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#name' => 'rules_core_nodequeue_remove_action',
+            '#info' => array(
+              'module' => 'Node',
+              'arguments' => array(
+                'node' => array(
+                  'label' => 'Content',
+                  'type' => 'node',
+                ),
+              ),
+              'label' => 'Remove from Nodequeues',
+              'base' => 'rules_core_action_execute',
+              'action_name' => 'nodequeue_remove_action',
+              'configurable' => TRUE,
+            ),
+          ),
+        ),
+        '#version' => 6003,
+      ),
+      'rules_remove_staff_from_staff_list_on_update' => array(
+        '#type' => 'rule',
+        '#set' => 'event_node_update',
+        '#label' => 'Remove staff from staff list on update',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'piropublic_about',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#type' => 'condition',
+            '#settings' => array(
+              'type' => array(
+                'staff' => 'staff',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#name' => 'rules_condition_content_is_type',
+            '#info' => array(
+              'label' => 'Updated content is Staff/Board',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'module' => 'Node',
+            ),
+            '#weight' => 0,
+          ),
+          '1' => array(
+            '#weight' => 0,
+            '#negate' => 1,
+            '#info' => array(
+              'label' => 'Updated content\'s field \'field_staff_staff\' has value',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'eval input' => array(
+                '0' => 'code',
+                '1' => 'value|0|value',
+              ),
+              'module' => 'CCK',
+            ),
+            '#name' => 'content_rules_field_has_value',
+            '#type' => 'condition',
+            '#settings' => array(
+              'field_name' => 'field_staff_staff',
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+              'value' => array(
+                '0' => array(
+                  'value' => 'staff',
+                ),
+              ),
+              'code' => '',
+              'vars' => array(),
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'code' => array(
+                    '0' => ':global',
+                  ),
+                  'value|0|value' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#type' => 'action',
+            '#settings' => array(
+              'qids' => array(
+                '2' => '2',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#name' => 'rules_core_nodequeue_remove_action',
+            '#info' => array(
+              'module' => 'Node',
+              'arguments' => array(
+                'node' => array(
+                  'label' => 'Content',
+                  'type' => 'node',
+                ),
+              ),
+              'label' => 'Remove from Nodequeues',
+              'base' => 'rules_core_action_execute',
+              'action_name' => 'nodequeue_remove_action',
+              'configurable' => TRUE,
+            ),
           ),
         ),
         '#version' => 6003,
@@ -655,222 +944,6 @@ function piropublic_about_rules_defaults() {
               ),
             ),
             '#weight' => 0,
-          ),
-        ),
-        '#version' => 6003,
-      ),
-      'rules_remove_board_from_board_list_on_update' => array(
-        '#type' => 'rule',
-        '#set' => 'event_node_update',
-        '#label' => 'Remove board from board list on update',
-        '#active' => 1,
-        '#weight' => '0',
-        '#categories' => array(
-          '0' => 'piropublic_about',
-        ),
-        '#status' => 'default',
-        '#conditions' => array(
-          '0' => array(
-            '#type' => 'condition',
-            '#settings' => array(
-              'type' => array(
-                'staff' => 'staff',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#name' => 'rules_condition_content_is_type',
-            '#info' => array(
-              'label' => 'Updated content is Staff/Board',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'module' => 'Node',
-            ),
-            '#weight' => 0,
-          ),
-          '1' => array(
-            '#settings' => array(
-              'field_name' => 'field_staff_board',
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-              'value' => array(
-                '0' => array(
-                  'value' => 'board',
-                ),
-              ),
-              'code' => '',
-              'vars' => array(),
-              '#eval input' => array(
-                'token_rules_input_evaluator' => array(
-                  'code' => array(
-                    '0' => ':global',
-                  ),
-                  'value|0|value' => array(
-                    '0' => ':global',
-                  ),
-                ),
-              ),
-            ),
-            '#type' => 'condition',
-            '#name' => 'content_rules_field_has_value',
-            '#info' => array(
-              'label' => 'Updated content\'s field \'field_staff_board\' has value',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'eval input' => array(
-                '0' => 'code',
-                '1' => 'value|0|value',
-              ),
-              'module' => 'CCK',
-            ),
-            '#weight' => 0,
-            '#negate' => 1,
-          ),
-        ),
-        '#actions' => array(
-          '0' => array(
-            '#weight' => 0,
-            '#type' => 'action',
-            '#settings' => array(
-              'qids' => array(
-                '2' => '2',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#name' => 'rules_core_nodequeue_remove_action',
-            '#info' => array(
-              'module' => 'Node',
-              'arguments' => array(
-                'node' => array(
-                  'label' => 'Content',
-                  'type' => 'node',
-                ),
-              ),
-              'label' => 'Remove from Nodequeues',
-              'base' => 'rules_core_action_execute',
-              'action_name' => 'nodequeue_remove_action',
-              'configurable' => TRUE,
-            ),
-          ),
-        ),
-        '#version' => 6003,
-      ),
-      'rules_remove_staff_from_staff_list_on_update' => array(
-        '#type' => 'rule',
-        '#set' => 'event_node_update',
-        '#label' => 'Remove staff from staff list on update',
-        '#active' => 1,
-        '#weight' => '0',
-        '#categories' => array(
-          '0' => 'piropublic_about',
-        ),
-        '#status' => 'default',
-        '#conditions' => array(
-          '0' => array(
-            '#weight' => 0,
-            '#info' => array(
-              'label' => 'Updated content is Staff/Board',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'module' => 'Node',
-            ),
-            '#name' => 'rules_condition_content_is_type',
-            '#settings' => array(
-              'type' => array(
-                'staff' => 'staff',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#type' => 'condition',
-          ),
-          '1' => array(
-            '#settings' => array(
-              'field_name' => 'field_staff_staff',
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-              'value' => array(
-                '0' => array(
-                  'value' => 'staff',
-                ),
-              ),
-              'code' => '',
-              'vars' => array(),
-              '#eval input' => array(
-                'token_rules_input_evaluator' => array(
-                  'code' => array(
-                    '0' => ':global',
-                  ),
-                  'value|0|value' => array(
-                    '0' => ':global',
-                  ),
-                ),
-              ),
-            ),
-            '#type' => 'condition',
-            '#name' => 'content_rules_field_has_value',
-            '#info' => array(
-              'label' => 'Updated content\'s field \'field_staff_staff\' has value',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'eval input' => array(
-                '0' => 'code',
-                '1' => 'value|0|value',
-              ),
-              'module' => 'CCK',
-            ),
-            '#weight' => 0,
-            '#negate' => 1,
-          ),
-        ),
-        '#actions' => array(
-          '0' => array(
-            '#weight' => 0,
-            '#info' => array(
-              'module' => 'Node',
-              'arguments' => array(
-                'node' => array(
-                  'label' => 'Content',
-                  'type' => 'node',
-                ),
-              ),
-              'label' => 'Remove from Nodequeues',
-              'base' => 'rules_core_action_execute',
-              'action_name' => 'nodequeue_remove_action',
-              'configurable' => TRUE,
-            ),
-            '#name' => 'rules_core_nodequeue_remove_action',
-            '#settings' => array(
-              'qids' => array(
-                '3' => '3',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#type' => 'action',
           ),
         ),
         '#version' => 6003,

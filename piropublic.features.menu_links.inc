@@ -6,43 +6,6 @@
 function piropublic_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-authheader:contact
-  $menu_links['menu-authheader:contact'] = array(
-    'menu_name' => 'menu-authheader',
-    'link_path' => 'contact',
-    'router_path' => 'contact',
-    'link_title' => 'Contact',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-46',
-  );
-  // Exported menu link: menu-authheader:logout
-  $menu_links['menu-authheader:logout'] = array(
-    'menu_name' => 'menu-authheader',
-    'link_path' => 'logout',
-    'router_path' => 'logout',
-    'link_title' => 'Logout',
-    'options' => array(
-      'attributes' => array(
-        'title' => '<br />
-',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-47',
-  );
   // Exported menu link: menu-footer:contact
   $menu_links['menu-footer:contact'] = array(
     'menu_name' => 'menu-footer',
@@ -61,52 +24,15 @@ function piropublic_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
-  // Exported menu link: menu-header-top-menu:contact
-  $menu_links['menu-header-top-menu:contact'] = array(
-    'menu_name' => 'menu-header-top-menu',
-    'link_path' => 'contact',
-    'router_path' => 'contact',
-    'link_title' => 'Contact Us',
+  // Exported menu link: menu-footer:node/1
+  $menu_links['menu-footer:node/1'] = array(
+    'menu_name' => 'menu-footer',
+    'link_path' => 'node/1',
+    'router_path' => 'node/%',
+    'link_title' => 'Terms of Us',
     'options' => array(
       'attributes' => array(
         'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-header:contact
-  $menu_links['menu-header:contact'] = array(
-    'menu_name' => 'menu-header',
-    'link_path' => 'contact',
-    'router_path' => 'contact',
-    'link_title' => 'Contact',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '4',
-  );
-  // Exported menu link: menu-header:user
-  $menu_links['menu-header:user'] = array(
-    'menu_name' => 'menu-header',
-    'link_path' => 'user',
-    'router_path' => 'user',
-    'link_title' => 'Login',
-    'options' => array(
-      'attributes' => array(
-        'title' => '<br />
-',
       ),
     ),
     'module' => 'menu',
@@ -115,6 +41,42 @@ function piropublic_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-50',
+  );
+  // Exported menu link: menu-footer:node/2
+  $menu_links['menu-footer:node/2'] = array(
+    'menu_name' => 'menu-footer',
+    'link_path' => 'node/2',
+    'router_path' => 'node/%',
+    'link_title' => 'Privacy Policy',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-49',
+  );
+  // Exported menu link: menu-footer:node/3
+  $menu_links['menu-footer:node/3'] = array(
+    'menu_name' => 'menu-footer',
+    'link_path' => 'node/3',
+    'router_path' => 'node/%',
+    'link_title' => 'Help',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-48',
   );
   // Exported menu link: primary-links:<front>
   $menu_links['primary-links:<front>'] = array(
@@ -137,10 +99,10 @@ function piropublic_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Contact');
-  t('Contact Us');
+  t('Help');
   t('Home');
-  t('Login');
-  t('Logout');
+  t('Privacy Policy');
+  t('Terms of Us');
 
 
   return $menu_links;

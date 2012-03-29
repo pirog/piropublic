@@ -6,335 +6,6 @@
 function piropublic_frontpage_content_default_fields() {
   $fields = array();
 
-  // Exported field: field_events
-  $fields['featured_blocks-field_events'] = array(
-    'field_name' => 'field_events',
-    'type_name' => 'featured_blocks',
-    'display_settings' => array(
-      'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'number_integer',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'number',
-    'active' => '1',
-    'prefix' => '',
-    'suffix' => '',
-    'min' => '',
-    'max' => '',
-    'allowed_values' => '0|No
-1|Upcoming Event',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'default_value' => array(
-        '0' => array(
-          'value' => 0,
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Upcoming Event',
-      'weight' => '-1',
-      'description' => '',
-      'type' => 'optionwidgets_onoff',
-      'module' => 'optionwidgets',
-    ),
-  );
-
-  // Exported field: field_feat_image
-  $fields['featured_blocks-field_feat_image'] = array(
-    'field_name' => 'field_feat_image',
-    'type_name' => 'featured_blocks',
-    'display_settings' => array(
-      'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
-      ),
-      'teaser' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'filefield',
-    'required' => '1',
-    'multiple' => '0',
-    'module' => 'filefield',
-    'active' => '1',
-    'list_field' => '0',
-    'list_default' => 1,
-    'description_field' => '0',
-    'widget' => array(
-      'file_extensions' => 'png gif jpg jpeg',
-      'file_path' => '',
-      'progress_indicator' => 'bar',
-      'max_filesize_per_file' => '1M',
-      'max_filesize_per_node' => '1M',
-      'max_resolution' => '500x500',
-      'min_resolution' => '165x200',
-      'alt' => '',
-      'custom_alt' => 0,
-      'title' => '',
-      'custom_title' => 0,
-      'title_type' => 'textfield',
-      'default_image' => NULL,
-      'use_default_image' => 0,
-      'resolution' => '165x200',
-      'enforce_ratio' => 1,
-      'croparea' => '500x500',
-      'enforce_minimum' => 1,
-      'label' => 'Featured image',
-      'weight' => '-4',
-      'description' => '',
-      'type' => 'imagefield_crop_widget',
-      'module' => 'imagefield_crop',
-    ),
-  );
-
-  // Exported field: field_featured_block_link
-  $fields['featured_blocks-field_featured_block_link'] = array(
-    'field_name' => 'field_featured_block_link',
-    'type_name' => 'featured_blocks',
-    'display_settings' => array(
-      'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'link',
-    'required' => '1',
-    'multiple' => '0',
-    'module' => 'link',
-    'active' => '1',
-    'attributes' => array(
-      'target' => 'user',
-      'rel' => '',
-      'class' => '',
-      'title' => '',
-    ),
-    'display' => array(
-      'url_cutoff' => '80',
-    ),
-    'url' => 0,
-    'title' => 'none',
-    'title_value' => '',
-    'enable_tokens' => 0,
-    'validate_url' => 1,
-    'widget' => array(
-      'default_value' => array(
-        '0' => array(
-          'title' => '',
-          'url' => '',
-          'attributes' => array(
-            'target' => '_blank',
-          ),
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Link to',
-      'weight' => '-3',
-      'description' => '',
-      'type' => 'link',
-      'module' => 'link',
-    ),
-  );
-
-  // Exported field: field_legislative
-  $fields['featured_blocks-field_legislative'] = array(
-    'field_name' => 'field_legislative',
-    'type_name' => 'featured_blocks',
-    'display_settings' => array(
-      'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'number_integer',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'number',
-    'active' => '1',
-    'prefix' => '',
-    'suffix' => '',
-    'min' => '',
-    'max' => '',
-    'allowed_values' => '0|No
-1|Legislative Effort',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'default_value' => array(
-        '0' => array(
-          'value' => 0,
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Legislative Effort',
-      'weight' => '-2',
-      'description' => '',
-      'type' => 'optionwidgets_onoff',
-      'module' => 'optionwidgets',
-    ),
-  );
-
-  // Exported field: field_store
-  $fields['featured_blocks-field_store'] = array(
-    'field_name' => 'field_store',
-    'type_name' => 'featured_blocks',
-    'display_settings' => array(
-      'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'number_integer',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'number',
-    'active' => '1',
-    'prefix' => '',
-    'suffix' => '',
-    'min' => '',
-    'max' => '',
-    'allowed_values' => '0|No
-1|From Our Store',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'default_value' => array(
-        '0' => array(
-          'value' => 0,
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'From Our Store',
-      'weight' => 0,
-      'description' => '',
-      'type' => 'optionwidgets_onoff',
-      'module' => 'optionwidgets',
-    ),
-  );
-
   // Exported field: field_frontpage_banner_btntxt
   $fields['frontpage_banner-field_frontpage_banner_btntxt'] = array(
     'field_name' => 'field_frontpage_banner_btntxt',
@@ -404,17 +75,17 @@ function piropublic_frontpage_content_default_fields() {
     'field_name' => 'field_frontpage_banner_desc',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
-      'weight' => '-1',
+      'weight' => 0,
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -520,93 +191,9 @@ function piropublic_frontpage_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Embed Code',
       'weight' => '4',
-      'description' => 'Paste the video embed code here',
+      'description' => 'Paste the video embed code here. You need to make sure the width height parameter of the embedded video is 640x390 for large videos and 420x235 for smaller videos.',
       'type' => 'text_textfield',
       'module' => 'text',
-    ),
-  );
-
-  // Exported field: field_frontpage_banner_foxnews
-  $fields['frontpage_banner-field_frontpage_banner_foxnews'] = array(
-    'field_name' => 'field_frontpage_banner_foxnews',
-    'type_name' => 'frontpage_banner',
-    'display_settings' => array(
-      'weight' => '3',
-      'parent' => 'group_frontpage_banner_vidgrp',
-      'label' => array(
-        'format' => 'hidden',
-      ),
-      'teaser' => array(
-        'format' => 'hidden',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'hidden',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'emvideo',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'emvideo',
-    'active' => '1',
-    'widget' => array(
-      'video_width' => '610',
-      'video_height' => '350',
-      'video_autoplay' => 1,
-      'preview_width' => '610',
-      'preview_height' => '350',
-      'preview_autoplay' => 0,
-      'thumbnail_width' => '610',
-      'thumbnail_height' => '350',
-      'thumbnail_default_path' => '',
-      'thumbnail_link_title' => 'See video',
-      'meta_fields' => array(
-        'title' => 0,
-        'description' => 0,
-      ),
-      'providers' => array(
-        'foxnews' => 'foxnews',
-        'youtube' => 0,
-      ),
-      'emthumb' => 0,
-      'emthumb_label' => 'FoxNews custom thumbnail',
-      'emthumb_description' => 'If you upload a custom thumbnail, then this will be displayed when the FoxNews thumbnail is called for, overriding any automatic thumbnails by custom providers.',
-      'emthumb_max_resolution' => '0',
-      'emimport_image_path' => '',
-      'emthumb_custom_alt' => 0,
-      'emthumb_custom_title' => 0,
-      'emthumb_store_local_thumbnail' => 1,
-      'emthumb_start_collapsed' => 0,
-      'default_value' => array(
-        '0' => array(
-          'embed' => '',
-          'value' => '',
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'FoxNews',
-      'weight' => '3',
-      'description' => '',
-      'type' => 'emvideo_textfields',
-      'module' => 'emvideo',
     ),
   );
 
@@ -655,7 +242,7 @@ function piropublic_frontpage_content_default_fields() {
     'list_default' => 1,
     'description_field' => '0',
     'widget' => array(
-      'resolution' => '610x350',
+      'resolution' => '640x390',
       'enforce_ratio' => 1,
       'croparea' => '700x700',
       'enforce_minimum' => 0,
@@ -833,7 +420,7 @@ function piropublic_frontpage_content_default_fields() {
     'field_name' => 'field_frontpage_banner_type',
     'type_name' => 'frontpage_banner',
     'display_settings' => array(
-      'weight' => '-2',
+      'weight' => '-3',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -882,7 +469,7 @@ video|Video',
       ),
       'default_value_php' => NULL,
       'label' => 'Posting',
-      'weight' => '-1',
+      'weight' => '-3',
       'description' => '',
       'type' => 'optionwidgets_buttons',
       'module' => 'optionwidgets',
@@ -933,7 +520,6 @@ video|Video',
     'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => 'youtube|YouTube
-foxnews|FoxNews
 other|Other (Embed Code)',
     'allowed_values_php' => '',
     'widget' => array(
@@ -962,11 +548,11 @@ other|Other (Embed Code)',
         'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -1056,14 +642,14 @@ other|Other (Embed Code)',
     'module' => 'emvideo',
     'active' => '1',
     'widget' => array(
-      'video_width' => '610',
-      'video_height' => '350',
+      'video_width' => '640',
+      'video_height' => '390',
       'video_autoplay' => 1,
-      'preview_width' => '610',
-      'preview_height' => '350',
+      'preview_width' => '420',
+      'preview_height' => '235',
       'preview_autoplay' => 1,
-      'thumbnail_width' => '610',
-      'thumbnail_height' => '350',
+      'thumbnail_width' => '640',
+      'thumbnail_height' => '390',
       'thumbnail_default_path' => '',
       'thumbnail_link_title' => 'See video',
       'meta_fields' => array(
@@ -1072,7 +658,6 @@ other|Other (Embed Code)',
       ),
       'providers' => array(
         'youtube' => 'youtube',
-        'foxnews' => 0,
       ),
       'emthumb' => 0,
       'emthumb_label' => 'YouTube custom thumbnail',
@@ -1104,14 +689,9 @@ other|Other (Embed Code)',
   t('Brief Description');
   t('Button Text');
   t('Embed Code');
-  t('Featured image');
-  t('FoxNews');
-  t('From Our Store');
-  t('Legislative Effort');
   t('Link to');
   t('Photo Source');
   t('Posting');
-  t('Upcoming Event');
   t('Video Source');
   t('What kind of video');
   t('YouTube');

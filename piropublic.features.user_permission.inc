@@ -6,6 +6,14 @@
 function piropublic_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: access administration menu
+  $permissions['access administration menu'] = array(
+    'name' => 'access administration menu',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
   // Exported permission: access administration pages
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
@@ -185,6 +193,14 @@ function piropublic_user_default_permissions() {
     'roles' => array(
       '0' => 'administrator',
       '1' => 'staff',
+    ),
+  );
+
+  // Exported permission: display drupal links
+  $permissions['display drupal links'] = array(
+    'name' => 'display drupal links',
+    'roles' => array(
+      '0' => 'administrator',
     ),
   );
 

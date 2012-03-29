@@ -6,117 +6,52 @@
 function piropublic_frontpage_default_fe_block_settings() {
   $export = array();
 
-  // admin_theme
-  $theme = array();
-
-  $theme['block-get_involved'] = array(
-    'module' => 'block',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '-1',
-    'machine_name' => 'get_involved',
-  );
-
-  $theme['block-get_local'] = array(
-    'module' => 'block',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Get Local',
-    'cache' => '-1',
-    'machine_name' => 'get_local',
-  );
-
-  $theme['block-social_media'] = array(
-    'module' => 'block',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Stay Connected',
-    'cache' => '-1',
-    'machine_name' => 'social_media',
-  );
-
-  $theme['views-frontpage_banner-block_1'] = array(
-    'module' => 'views',
-    'delta' => 'frontpage_banner-block_1',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $export['admin_theme'] = $theme;
-
   // liberty
   $theme = array();
 
-  $theme['block-get_involved'] = array(
+  $theme['block-stay_connected'] = array(
     'module' => 'block',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '-10',
+    'weight' => '0',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
-    'title' => '',
+    'title' => '<none>',
     'cache' => '-1',
-    'machine_name' => 'get_involved',
+    'machine_name' => 'stay_connected',
   );
 
-  $theme['block-get_local'] = array(
+  $theme['block-fp_social_media'] = array(
     'module' => 'block',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '-8',
+    'weight' => '0',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
-    'title' => 'Get Local',
+    'title' => '<none>',
     'cache' => '-1',
-    'machine_name' => 'get_local',
+    'machine_name' => 'fp_social_media',
   );
 
-  $theme['block-social_media'] = array(
-    'module' => 'block',
+  $theme['simplenews-52'] = array(
+    'module' => 'simplenews',
+    'delta' => '52',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '5',
+    'weight' => '0',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
-    'title' => 'Stay Connected',
+    'title' => '<none>',
     'cache' => '-1',
-    'machine_name' => 'social_media',
   );
 
   $theme['views-frontpage_banner-block_1'] = array(
@@ -124,7 +59,7 @@ function piropublic_frontpage_default_fe_block_settings() {
     'delta' => 'frontpage_banner-block_1',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '0',
+    'weight' => '2',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',

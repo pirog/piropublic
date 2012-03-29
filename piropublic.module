@@ -6,7 +6,6 @@ include_once('piropublic.features.inc');
  * Implementation of hook_init()
  */
 function piropublic_init() {
-  drupal_add_css(drupal_get_path('module', 'piropublic') . '/theme/css/piropublic.css');
   if (file_exists(drupal_get_path('module', 'piropublic') . '/theme/css/' . variable_get('theme_default', 'garland'). '.css')) {
     drupal_add_css(drupal_get_path('module', 'piropublic') . '/theme/css/' . variable_get('theme_default', 'garland'). '.css');
   }

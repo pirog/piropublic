@@ -13,8 +13,7 @@ function piropublic_about_perm() {
  * Implementation of hook_init()
  */
 function piropublic_about_init() {
-  drupal_add_css(drupal_get_path('module', 'piropublic_about') . '/theme/css/piropublic_about.css');
-  if (file_exists(drupal_get_path('module', 'piropublic_about') . '/theme/css/' . variable_get('theme_default', 'garland'). '.css')) {
+ if (file_exists(drupal_get_path('module', 'piropublic_about') . '/theme/css/' . variable_get('theme_default', 'garland'). '.css')) {
     drupal_add_css(drupal_get_path('module', 'piropublic_about') . '/theme/css/' . variable_get('theme_default', 'garland'). '.css');
   }
 }

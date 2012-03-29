@@ -7,28 +7,20 @@ function piropublic_frontpage_default_fe_block_boxes() {
   $export = array();
 
   $fe_block_boxes = new stdClass;
-  $fe_block_boxes->info = 'Get Involved';
+  $fe_block_boxes->info = 'Social Media Frontpage';
   $fe_block_boxes->format = '2';
-  $fe_block_boxes->machine_name = 'get_involved';
-  $fe_block_boxes->body = '<p style="text-align: center;"><span style="font-size:18px;"><em class="italic">How do I get involved?</em></span></p><p style="text-align: center;"><a href="/node/4277"><img alt="Get Email Updates" src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/get-email-updates.jpg" style="width: 178px; height: 28px;"></a></p><p style="text-align: center;"><a href="user/register"><img alt="Join a group" src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/join-a-group.jpg" style="width: 178px; height: 28px;"></a></p>';
+  $fe_block_boxes->machine_name = 'fp_social_media';
+  $fe_block_boxes->body = '<div class="block-content clear-block"><p><a href="http://www.facebook.com/pages/Liberty-Coalition/318132301249" target="_blank"><img src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/facebook.png" class="sm-first" style="border-width: 0px; border-style: solid;" /></a><a href="https://twitter.com/#!/4yourfreedom" target="_blank"><img src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/twitter.png" style="border-width: 0px; border-style: solid;" /></a><a href="http://www.youtube.com/user/libertycoalition" target="_blank"><img src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/youtube.png" style="border-width: 0px; border-style: solid;" /></a><a href="rss" target="_blank"><img src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/rss.png" style="border-width: 0px; border-style: solid;" /></a></p></div>';
 
-  $export['get_involved'] = $fe_block_boxes;
+  $export['fp_social_media'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass;
-  $fe_block_boxes->info = 'Get Local';
+  $fe_block_boxes->info = 'Stay Connected';
   $fe_block_boxes->format = '2';
-  $fe_block_boxes->machine_name = 'get_local';
-  $fe_block_boxes->body = '<p style="text-align: center;"><span><a href="/community">Find local news, events<br>and groups</a></span><br><span style="z-index: -100;"><a href="/community"><img alt="Get Local Map" src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/get-local-map.jpg"></a> </span></p>';
+  $fe_block_boxes->machine_name = 'stay_connected';
+  $fe_block_boxes->body = '<p><img alt="" src="sites/default/files/staycon_1.png" style="width: 300px; height: 71px;" /></p>';
 
-  $export['get_local'] = $fe_block_boxes;
-
-  $fe_block_boxes = new stdClass;
-  $fe_block_boxes->info = 'Stay Connected Social Media';
-  $fe_block_boxes->format = '2';
-  $fe_block_boxes->machine_name = 'social_media';
-  $fe_block_boxes->body = '<p><a href="http://www.facebook.com/CampaignforLiberty" target="_blank"><img src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/facebook-icon.jpg" style="border-width: 0px; border-style: solid;"></a><a href="http://www.twitter.com/c4liberty" target="_blank"><img src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/twitter-icon.jpg" style="border-width: 0px; border-style: solid;"></a><a href="http://www.youtube.com/campaignforliberty" target="_blank"><img src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/youtube-icon.jpg" style="border-width: 0px; border-style: solid;"></a><a href="/rss.xml" target="_blank"><img src="sites/all/modules/features/piropublic/piropublic_frontpage/theme/img/rss-icon.jpg" style="border-width: 0px; border-style: solid;"></a></p>';
-
-  $export['social_media'] = $fe_block_boxes;
+  $export['stay_connected'] = $fe_block_boxes;
 
   return $export;
 }

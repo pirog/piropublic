@@ -7,6 +7,7 @@
  * - $admin_links: List of management tools for this node and queue.
  * - $media: Image or inline video.
  * - $source: Source of $media.
+ * - $sharethis: if available, the sharethis buttons
  * - $button: The button content.
  * - $view: The view in use.
  * - $fields: an array of $field objects. Each one contains:
@@ -22,10 +23,19 @@
  *
  * @ingroup views_templates
  */
+
 ?>
 
 <div class="promo_item">
   <div class="promo_left">
+    <div class="media-wrapper <?php print $attr['classes']; ?>">
+      <?php print $media; ?>
+    </div>
+    <div class="admin_links admin_top">
+      <?php print $admin_links; ?>
+    </div>
+  </div>
+  <div class="promo_right">
     <h1>
       <?php print $fields['title']->content; ?>
     </h1>
@@ -37,16 +47,11 @@
     </div>
     <div class="extra-links">
     </div>
-  </div>
-  <div class="promo_right">
-    <div class="media-wrapper <?php print $attr['classes']; ?>">
-      <?php print $media; ?>
-    </div>
-    <div class="admin_links admin_top">
-      <?php print $admin_links; ?>
-    </div>
     <div class="source">
-      <?php print $source; ?>
+      <?php print "Source: " . $source; ?>
+    </div>
+    <div class="sharethis">
+      <?php print $sharethis; ?>
     </div>
   </div>
 </div>

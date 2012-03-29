@@ -6,101 +6,6 @@
 function piropublic_about_default_fe_block_settings() {
   $export = array();
 
-  // admin_theme
-  $theme = array();
-
-  $theme['block-faq'] = array(
-    'module' => 'block',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Have a Question? ',
-    'cache' => '-1',
-    'machine_name' => 'faq',
-  );
-
-  $theme['block-faq_question'] = array(
-    'module' => 'block',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '2',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Don\'t See Your Question? ',
-    'cache' => '-1',
-    'machine_name' => 'faq_question',
-  );
-
-  $theme['block-mission_statement'] = array(
-    'module' => 'block',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '-1',
-    'machine_name' => 'mission_statement',
-  );
-
-  $theme['menu_block-1'] = array(
-    'module' => 'menu_block',
-    'delta' => '1',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views--exp-faq-default'] = array(
-    'module' => 'views',
-    'delta' => '-exp-faq-default',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '1',
-  );
-
-  $theme['views--exp-faq-page_1'] = array(
-    'module' => 'views',
-    'delta' => '-exp-faq-page_1',
-    'theme' => 'admin_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Filter by Question Type',
-    'cache' => '1',
-  );
-
-  $export['admin_theme'] = $theme;
-
   // liberty
   $theme = array();
 
@@ -108,7 +13,7 @@ function piropublic_about_default_fe_block_settings() {
     'module' => 'block',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '-7',
+    'weight' => '-17',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
@@ -123,7 +28,7 @@ function piropublic_about_default_fe_block_settings() {
     'module' => 'block',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '4',
+    'weight' => '23',
     'region' => '',
     'custom' => '2',
     'throttle' => '0',
@@ -132,21 +37,6 @@ function piropublic_about_default_fe_block_settings() {
     'title' => 'Don\'t See Your Question? ',
     'cache' => '-1',
     'machine_name' => 'faq_question',
-  );
-
-  $theme['block-mission_statement'] = array(
-    'module' => 'block',
-    'theme' => 'liberty',
-    'status' => 0,
-    'weight' => '13',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '-1',
-    'machine_name' => 'mission_statement',
   );
 
   $theme['menu_block-1'] = array(
@@ -169,7 +59,7 @@ function piropublic_about_default_fe_block_settings() {
     'delta' => '-exp-faq-default',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '-11',
+    'weight' => '-21',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',
@@ -184,7 +74,7 @@ function piropublic_about_default_fe_block_settings() {
     'delta' => '-exp-faq-page_1',
     'theme' => 'liberty',
     'status' => 0,
-    'weight' => '-9',
+    'weight' => '-19',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',

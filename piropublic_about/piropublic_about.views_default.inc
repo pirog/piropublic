@@ -387,13 +387,13 @@ function piropublic_about_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('title', 'Board of Directors');
+  $handler->override_option('title', 'Leadership');
   $handler->override_option('empty', '<?php  
 if (user_access(\'create staff content\')) {
     drupal_set_message(t(\'A board member has not been added yet.\') . \' \' . l(t(\'Click here to add one.\'), \'node/add/staff\'));
 }
 ?>');
-  $handler->override_option('empty_format', '4');
+  $handler->override_option('empty_format', '3');
   $handler->override_option('items_per_page', 0);
   $handler->override_option('style_plugin', 'grid');
   $handler->override_option('style_options', array(
@@ -656,7 +656,7 @@ if (user_access(\'create staff content\')) {
       ),
       'type' => 'select',
       'limit' => TRUE,
-      'vid' => '3',
+      'vid' => '2',
       'id' => 'tid',
       'table' => 'term_node',
       'field' => 'tid',
@@ -680,7 +680,7 @@ if (user_access(\'create faq content\')) {
 else {
 drupal_set_message(t(\'There are no questions in this category. Be the first to <a href="/contact">suggest one</a>.\'));}
 ?>');
-  $handler->override_option('empty_format', '4');
+  $handler->override_option('empty_format', '3');
   $handler->override_option('items_per_page', 0);
   $handler->override_option('style_plugin', 'list');
   $handler->override_option('style_options', array(
@@ -1092,13 +1092,13 @@ drupal_set_message(t(\'There are no questions in this category. Be the first to 
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('title', 'Staff');
+  $handler->override_option('title', 'Research Associates');
   $handler->override_option('empty', '<?php  
 if (user_access(\'create staff content\')) {
     drupal_set_message(t(\'A staff member has not been added yet.\') . \' \' . l(t(\'Click here to add one.\'), \'node/add/staff\'));
 }
 ?>');
-  $handler->override_option('empty_format', '4');
+  $handler->override_option('empty_format', '3');
   $handler->override_option('items_per_page', 0);
   $handler->override_option('style_plugin', 'grid');
   $handler->override_option('style_options', array(

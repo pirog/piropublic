@@ -79,15 +79,6 @@ $items[] = array (
 );
 $items[] = array (
   'control_field_name' => 'field_frontpage_banner_videotype',
-  'field_name' => 'field_frontpage_banner_foxnews',
-  'type' => 'frontpage_banner',
-  'trigger_values' => 
-  array (
-    'foxnews' => 'foxnews',
-  ),
-);
-$items[] = array (
-  'control_field_name' => 'field_frontpage_banner_videotype',
   'field_name' => 'field_frontpage_banner_vidsrc',
   'type' => 'frontpage_banner',
   'trigger_values' => 

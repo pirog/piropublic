@@ -5,7 +5,10 @@
  */
 function piropublic_frontpage_ctools_plugin_api() {
   list($module, $api) = func_get_args();
-  if ($module == "strongarm" && $api == "strongarm") {
+  if ($module == "context" && $api == "context") {
+    return array("version" => 3);
+  }
+  elseif ($module == "strongarm" && $api == "strongarm") {
     return array("version" => 1);
   }
 }
@@ -34,88 +37,12 @@ function piropublic_frontpage_default_fe_nodequeue_queue() {
     0 => 'frontpage_banner',
   );
   $fe_nodequeue_queue->roles = array(
-    0 => '5',
-    1 => '7',
+    0 => '7',
   );
   $fe_nodequeue_queue->count = 0;
   $fe_nodequeue_queue->machine_name = 'frontpage_banner_queue';
 
   $export['frontpage_banner_queue'] = $fe_nodequeue_queue;
-
-  $fe_nodequeue_queue = new stdClass;
-  $fe_nodequeue_queue->name = 'frontpage_center';
-  $fe_nodequeue_queue->title = 'Frontpage Center Column';
-  $fe_nodequeue_queue->subqueue_title = '';
-  $fe_nodequeue_queue->size = '3';
-  $fe_nodequeue_queue->link = 'Add to front page center column';
-  $fe_nodequeue_queue->link_remove = 'Remove from front page center column';
-  $fe_nodequeue_queue->owner = 'nodequeue';
-  $fe_nodequeue_queue->show_in_ui = '1';
-  $fe_nodequeue_queue->show_in_tab = '1';
-  $fe_nodequeue_queue->show_in_links = '1';
-  $fe_nodequeue_queue->reference = '0';
-  $fe_nodequeue_queue->reverse = '1';
-  $fe_nodequeue_queue->i18n = '0';
-  $fe_nodequeue_queue->types = array(
-    0 => 'memblog',
-  );
-  $fe_nodequeue_queue->roles = array(
-    0 => '7',
-  );
-  $fe_nodequeue_queue->count = 0;
-  $fe_nodequeue_queue->machine_name = 'frontpage_center';
-
-  $export['frontpage_center'] = $fe_nodequeue_queue;
-
-  $fe_nodequeue_queue = new stdClass;
-  $fe_nodequeue_queue->name = 'member_posts';
-  $fe_nodequeue_queue->title = 'Member Posts';
-  $fe_nodequeue_queue->subqueue_title = '';
-  $fe_nodequeue_queue->size = '8';
-  $fe_nodequeue_queue->link = 'Add to member posts';
-  $fe_nodequeue_queue->link_remove = 'Remove from member posts';
-  $fe_nodequeue_queue->owner = 'nodequeue';
-  $fe_nodequeue_queue->show_in_ui = '1';
-  $fe_nodequeue_queue->show_in_tab = '1';
-  $fe_nodequeue_queue->show_in_links = '1';
-  $fe_nodequeue_queue->reference = '0';
-  $fe_nodequeue_queue->reverse = '1';
-  $fe_nodequeue_queue->i18n = '0';
-  $fe_nodequeue_queue->types = array(
-    0 => 'memblog',
-  );
-  $fe_nodequeue_queue->roles = array(
-    0 => '7',
-  );
-  $fe_nodequeue_queue->count = 0;
-  $fe_nodequeue_queue->machine_name = 'member_posts';
-
-  $export['member_posts'] = $fe_nodequeue_queue;
-
-  $fe_nodequeue_queue = new stdClass;
-  $fe_nodequeue_queue->name = 'national_blog';
-  $fe_nodequeue_queue->title = 'National Blog';
-  $fe_nodequeue_queue->subqueue_title = '';
-  $fe_nodequeue_queue->size = '8';
-  $fe_nodequeue_queue->link = 'Add to national blog';
-  $fe_nodequeue_queue->link_remove = 'Remove from national blog';
-  $fe_nodequeue_queue->owner = 'nodequeue';
-  $fe_nodequeue_queue->show_in_ui = '1';
-  $fe_nodequeue_queue->show_in_tab = '1';
-  $fe_nodequeue_queue->show_in_links = '1';
-  $fe_nodequeue_queue->reference = '0';
-  $fe_nodequeue_queue->reverse = '1';
-  $fe_nodequeue_queue->i18n = '0';
-  $fe_nodequeue_queue->types = array(
-    0 => 'memblog',
-  );
-  $fe_nodequeue_queue->roles = array(
-    0 => '7',
-  );
-  $fe_nodequeue_queue->count = 0;
-  $fe_nodequeue_queue->machine_name = 'national_blog';
-
-  $export['national_blog'] = $fe_nodequeue_queue;
 
   return $export;
 }
@@ -125,20 +52,6 @@ function piropublic_frontpage_default_fe_nodequeue_queue() {
  */
 function piropublic_frontpage_imagecache_default_presets() {
   $items = array(
-    'featured_block' => array(
-      'presetname' => 'featured_block',
-      'actions' => array(
-        '0' => array(
-          'weight' => '0',
-          'module' => 'imagecache',
-          'action' => 'imagecache_scale_and_crop',
-          'data' => array(
-            'width' => '165',
-            'height' => '200',
-          ),
-        ),
-      ),
-    ),
     'frontpage_banner' => array(
       'presetname' => 'frontpage_banner',
       'actions' => array(
@@ -147,8 +60,8 @@ function piropublic_frontpage_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
-            'width' => '610',
-            'height' => '350',
+            'width' => '640',
+            'height' => '390',
           ),
         ),
       ),
@@ -162,17 +75,6 @@ function piropublic_frontpage_imagecache_default_presets() {
  */
 function piropublic_frontpage_node_info() {
   $items = array(
-    'featured_blocks' => array(
-      'name' => t('Featured Blocks'),
-      'module' => 'features',
-      'description' => t('Images that jcarousel and link to other content'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'has_body' => '0',
-      'body_label' => '',
-      'min_word_count' => '0',
-      'help' => '',
-    ),
     'frontpage_banner' => array(
       'name' => t('Frontpage Banner'),
       'module' => 'features',
@@ -194,10 +96,103 @@ function piropublic_frontpage_node_info() {
 function piropublic_frontpage_rules_defaults() {
   return array(
     'rules' => array(
-      'rules_add_new_frontpage_banner_to_top_of_nodequeue' => array(
+      'rules_redirect_frontpage_node_to_frontpage' => array(
         '#type' => 'rule',
-        '#set' => 'event_node_insert',
-        '#label' => 'Add New Frontpage Banner to Top of Nodequeue',
+        '#set' => 'event_node_view',
+        '#label' => 'Redirect frontpage node to frontpage',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'piropublic_frontpage',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Viewed content is Frontpage Banner',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'module' => 'Node',
+            ),
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'frontpage_banner' => 'frontpage_banner',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
+          ),
+          '2' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Viewed content is published',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'module' => 'Node',
+            ),
+            '#name' => 'rules_condition_content_is_published',
+            '#settings' => array(
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#type' => 'action',
+            '#settings' => array(
+              'path' => '<front>',
+              'query' => '',
+              'fragment' => '',
+              'force' => 1,
+              'immediate' => 0,
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'path' => array(
+                    '0' => ':global',
+                  ),
+                  'query' => array(
+                    '0' => ':global',
+                  ),
+                  'fragment' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+            '#name' => 'rules_action_drupal_goto',
+            '#info' => array(
+              'label' => 'Page redirect',
+              'module' => 'System',
+              'eval input' => array(
+                '0' => 'path',
+                '1' => 'query',
+                '2' => 'fragment',
+              ),
+            ),
+          ),
+        ),
+        '#version' => 6003,
+      ),
+      'rules_redirect_frontpage_banner_creation_to_frontpage' => array(
+        '#type' => 'rule',
+        '#set' => 'event_node_presave',
+        '#label' => 'Redirect frontpage banner creation to frontpage',
         '#active' => 1,
         '#weight' => '0',
         '#categories' => array(
@@ -217,7 +212,7 @@ function piropublic_frontpage_rules_defaults() {
             ),
             '#name' => 'rules_condition_content_is_type',
             '#info' => array(
-              'label' => 'Created content is Frontpage Banner',
+              'label' => 'Saved content is Frontpage Banner',
               'arguments' => array(
                 'node' => array(
                   'type' => 'node',
@@ -231,16 +226,80 @@ function piropublic_frontpage_rules_defaults() {
         ),
         '#actions' => array(
           '0' => array(
-            '#type' => 'action',
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Page redirect',
+              'module' => 'System',
+              'eval input' => array(
+                '0' => 'path',
+                '1' => 'query',
+                '2' => 'fragment',
+              ),
+            ),
+            '#name' => 'rules_action_drupal_goto',
             '#settings' => array(
-              'qids' => array(
-                '1' => '1',
+              'path' => '<front>',
+              'query' => '',
+              'fragment' => '',
+              'force' => 1,
+              'immediate' => 0,
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'path' => array(
+                    '0' => ':global',
+                  ),
+                  'query' => array(
+                    '0' => ':global',
+                  ),
+                  'fragment' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+            '#type' => 'action',
+          ),
+        ),
+        '#version' => 6003,
+      ),
+      'rules_add_new_frontpage_banner_to_top_of_nodequeue' => array(
+        '#type' => 'rule',
+        '#set' => 'event_node_insert',
+        '#label' => 'Add New Frontpage Banner to Top of Nodequeue',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'piropublic_frontpage',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Created content is Frontpage Banner',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Content',
+                ),
+              ),
+              'module' => 'Node',
+            ),
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'frontpage_banner' => 'frontpage_banner',
               ),
               '#argument map' => array(
                 'node' => 'node',
               ),
             ),
-            '#name' => 'rules_core_nodequeue_add_action',
+            '#type' => 'condition',
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
             '#info' => array(
               'module' => 'Node',
               'arguments' => array(
@@ -254,7 +313,16 @@ function piropublic_frontpage_rules_defaults() {
               'action_name' => 'nodequeue_add_action',
               'configurable' => TRUE,
             ),
-            '#weight' => 0,
+            '#name' => 'rules_core_nodequeue_add_action',
+            '#settings' => array(
+              'qids' => array(
+                '4' => '4',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'action',
           ),
         ),
         '#version' => 6003,
@@ -328,79 +396,6 @@ function piropublic_frontpage_rules_defaults() {
               ),
             ),
             '#type' => 'action',
-          ),
-        ),
-        '#version' => 6003,
-      ),
-      'rules_redirect_frontpage_banner_creation_to_frontpage' => array(
-        '#type' => 'rule',
-        '#set' => 'event_node_presave',
-        '#label' => 'Redirect frontpage banner creation to frontpage',
-        '#active' => 1,
-        '#weight' => '0',
-        '#categories' => array(
-          '0' => 'piropublic_frontpage',
-        ),
-        '#status' => 'default',
-        '#conditions' => array(
-          '0' => array(
-            '#weight' => 0,
-            '#info' => array(
-              'label' => 'Saved content is Frontpage Banner',
-              'arguments' => array(
-                'node' => array(
-                  'type' => 'node',
-                  'label' => 'Content',
-                ),
-              ),
-              'module' => 'Node',
-            ),
-            '#name' => 'rules_condition_content_is_type',
-            '#settings' => array(
-              'type' => array(
-                'frontpage_banner' => 'frontpage_banner',
-              ),
-              '#argument map' => array(
-                'node' => 'node',
-              ),
-            ),
-            '#type' => 'condition',
-          ),
-        ),
-        '#actions' => array(
-          '0' => array(
-            '#type' => 'action',
-            '#settings' => array(
-              'path' => '<front>',
-              'query' => '',
-              'fragment' => '',
-              'force' => 0,
-              'immediate' => 0,
-              '#eval input' => array(
-                'token_rules_input_evaluator' => array(
-                  'path' => array(
-                    '0' => ':global',
-                  ),
-                  'query' => array(
-                    '0' => ':global',
-                  ),
-                  'fragment' => array(
-                    '0' => ':global',
-                  ),
-                ),
-              ),
-            ),
-            '#name' => 'rules_action_drupal_goto',
-            '#info' => array(
-              'label' => 'Page redirect',
-              'module' => 'System',
-              'eval input' => array(
-                '0' => 'path',
-                '1' => 'query',
-                '2' => 'fragment',
-              ),
-            ),
-            '#weight' => 0,
           ),
         ),
         '#version' => 6003,
